@@ -1,0 +1,3802 @@
+<!-- site head -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Manage Images Content | iOS Application Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta content="Digimonk is a modern, fully responsive multipurpose admin template, which can be used for different purposes." name="description" />
+    <meta content="BeeWeb" name="author" />
+    <meta name="keywords" content="admin template, bootstrap 4, css3, customizable, dashboard, gulp, html5, material design, modern, native javascript, no jquery, no plugins, responsive, responsive admin, sass">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+    <link href="css/vendor.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/color-settings.css" rel="stylesheet" type="text/css" media="all" data-role="color-settings"/>
+		<link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+	<style type="text/css">
+	.sanjeev-table .no-footer .row{width:100%;}
+	.sanjeev-table .no-footer .row table.dataTable{border-collapse: collapse !important;}
+	.sanjeev-table div .row .col-sm-6 .dataTables_length label{float:left;}
+	.sanjeev-table div .row .col-sm-6 .dataTables_length label select{margin:0 10px;}
+	.sanjeev-table div .row .col-sm-6 .dataTables_filter label{float:left;}
+	 .sp-button{     position: absolute;    right: 0;    z-index: 999;}
+	 .sanjeev-table .card img:not(.img-fluid) {    width: 100%;    height: 250px;    object-fit: fill; }
+	 .sanjeev-table .card {    width: 65%;    height: auto;    margin: 0 auto;    display: block;}
+	 
+	 table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+        background: url(img/ase-dsc.png) no-repeat; width:20px; height:20px; font-size:0px;
+}
+table.dataTable thead .sorting_desc:after {
+    background: url(img/ase-dsc.png) no-repeat; width:20px; height:20px; font-size:0px;
+}
+table.dataTable thead .sorting_asc:after {
+    background: url(img/ase-dsc2.png) no-repeat; width:20px; height:20px; font-size:0px;
+}
+
+
+
+
+
+
+<!--@import url('//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+::-webkit-input-placeholder {color: #C6C9D0;}
+:-moz-placeholder {color: #C6C9D0;}
+::-moz-placeholder {color: #C6C9D0;}
+:-ms-input-placeholder {  color: #C6C9D0;}
+-->
+textarea {
+  border: 0;
+  font-size: 13px;
+  height: 30px;
+  min-height: 30px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0 10px;
+  width: calc(100% - 20px) !important;
+}
+
+.box {
+  background: #FFF;
+  border-radius: 4px;
+  box-shadow: 0 0 50px 5px rgba(0,0,0,.25);
+  height: auto;
+  margin: 30px auto 40px;
+  max-width: 500px;
+  overflow: hidden;
+  padding: 20px 0 0;
+  position: relative;
+}
+.box > [class*="box-"] {
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+}
+.box > [class*="box-"] img {
+  display: block;
+  width: 100%;
+}
+.box > .box-header {
+  margin: 0 auto;
+  padding: 0 30px 10px;
+  width: initial;
+}
+.box > .box-header > h3 {
+  font-size: 15px;
+  font-weight: 700;
+  height: 60px;
+  margin: 5px auto;
+  overflow: hidden;
+  padding: 5px 0 0;
+  position: relative;
+}
+.box > .box-header > h3 > a {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+.box > .box-header > h3 > span {
+  color: #9197A3;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: -8px;
+}
+.box > .box-header > h3 > span .fa {
+  font-size: 15px;
+  margin-left: 5px;
+}
+.box > .box-header > span {
+  background: #F4F4F4;
+  border-radius: 3px;
+  color: #BCBFC6;
+  cursor: pointer;
+  font-size: 24px;
+  height: 18px;
+  line-height: 18px;
+  margin: 5px auto 0;
+  padding: 3px 4px;
+  position: absolute;
+  right: 40px;
+  top: 0;
+}
+.box > .box-header > span:hover {
+  color: #888;
+}
+.box > .box-header > span > i {
+  height: 18px;
+  line-height: 18px;
+}
+.box > .box-header img {
+  border-radius: 100px;
+  float: left;
+  height: 60px;
+  margin: -5px 20px 0 0;
+  object-fit: cover;
+  width: 60px;
+}
+.box > .box-content {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: initial;
+}
+.box > .box-content > .content {
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: initial;
+}
+.box > .box-content > .bottom {
+  margin: 0 auto;
+  padding: 0 30px; 
+  position: relative;
+  width: initial;
+}
+.box > .box-content > .bottom > p {
+  color: #71747A;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+  padding: 20px 0;
+}
+.box > .box-content > .bottom > span {
+  background: linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,0));
+  height: 160px;
+  left: 0;
+  line-height: 160px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  text-align: right;
+  top: -160px;
+  vertical-align: bottom;
+  width: 100%;
+}
+.box > .box-content > .bottom > span > span {
+  background: rgba(0,0,0,.35);
+  border-radius: 4px;
+  bottom: 0;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 30px 25px auto;
+  opacity: .75;
+  overflow: hidden;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: auto;
+  -webkit-transition: all .25s ease-in-out;
+     -moz-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+}
+.box > .box-content > .bottom > span > span:hover {
+  opacity: 1;
+}
+.box > .box-likes {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 30px;
+  position: relative;
+}
+.box > .box-likes > .row {
+  border-top: 1px solid #F4F4F4;
+  padding: 20px 0;
+}
+.box > .box-likes > .row > span {
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 2px 0 0;
+  position: relative;
+  vertical-align: middle;
+}
+.box > .box-likes > .row:first-child {
+  float: left;
+  width: 60%;
+}
+.box > .box-likes > .row:last-child {
+  float: left;
+  text-align: end;
+  width: 40%;
+}
+.box > .box-likes > .row:first-child > span:nth-child(4) {
+  background: #4D679F;
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 0 8px 0 6px;
+}
+.box > .box-likes > .row:first-child > span:nth-child(4) > a {
+  color: #FFF;
+}
+.box > .box-likes > .row:first-child > span,
+.box > .box-likes > .row:last-child > span {
+  color: #9197A3;
+}
+.box > .box-likes > .row:last-child > span {
+  display: inline-block;
+  verrtical-align: middle;
+}
+.box > .box-likes > .row img {
+  border-radius: 100px;
+  height: 28px;
+  object-fit: cover;
+  width: 28px;
+}
+.box > .box-buttons {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+.box > .box-buttons *,*::before,*::after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.box > .box-buttons > .row {
+  border-bottom: 1px solid #F4F4F4;
+  border-top: 1px solid #F4F4F4;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+.box > .box-buttons > .row > button:last-child {
+  border: 0;
+}
+.box > .box-buttons > .row > button {
+  background: #FFF;
+  border: 0;
+  border-right: 1px solid #F4F4F4;
+  color: #9197A3;
+  font-size: 20px;
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  margin: 0;
+  *outline: 1px #08F;
+  padding: 0;
+  width: 33.33333333333%;
+}
+.box > .box-buttons > .row > button:hover {
+  background: #F5F5F5;
+  color: #7D8696;
+}
+.box > .box-buttons > .row > button:focus {
+  background: #F0F2F2;
+  color: #6C7588;
+  box-shadow: inset 0 0 10px rgba(0,0,0,.2);
+  outline-color: #08F;
+}
+.box > .box-click {
+  color: #4D679F;
+  font-size: 13px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px 30px;
+  position: relative;
+}
+.box > .box-click > span {
+  cursor: pointer;
+}
+.box > .box-click > span i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.box > .box-comments {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+.box > .box-comments > .comment {
+  border-top: 1px solid #F4F4F4;
+  margin: 0;
+  overflow: hidden;
+  padding: 16px 30px;
+  position: relative;
+}
+.box > .box-comments > .comment > img {
+  border-radius: 100px;
+  float: left;
+  height: 56px;
+  margin: 0;
+  object-fit: cover;
+  width: 56px;
+}
+.box > .box-comments > .comment > .content {
+  height: auto;
+  line-height: 20px;
+  margin: 0 0 0 70px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: initial;
+}
+.box > .box-comments > .comment > .content > h3 {
+  float: left;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 4px auto 0;
+  text-transform: capitalize;
+  width: 150px;
+}
+.box > .box-comments > .comment > .content > h3 > span {
+  color: #9197A3;
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+}
+.box > .box-comments > .comment > .content > p {
+  color: #4B4D53;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+.box > .box-new-comment {
+  background: #9298A4;
+  margin: 0;
+  overflow: hidden;
+  padding: 20px 30px;
+  position: relative;
+}
+.box > .box-new-comment > img {
+  border-radius: 100px;
+  float: left;
+  height: 40px;
+  margin: 0;
+  object-fit: cover;
+  width: 40px;  
+}
+.box > .box-new-comment > .content {
+  border-radius: 20px;
+  margin: 4px 0 0 52px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: initial;
+  -webkit-transition: all .25s ease-in-out;
+     -moz-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+}
+.box > .box-new-comment > .content > .row {
+  background: transparent;
+  display: inline-block;
+  height: 32px;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+  -webkit-transition: all .25s ease-in-out;
+     -moz-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+}
+.box > .box-new-comment > .content > .row:last-child {
+  color: #C6C9D0;
+  font-size: 22px;
+  height: 28px;
+  line-height: 27px;
+  margin: 2px 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 10px;
+  width: 40px;
+}
+.box > .box-new-comment > .content > .row:last-child > span {cursor: pointer;}
+.box > .box-new-comment > .content > .row > textarea {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: #555;
+  outline: 0;
+  padding: 0 40px 0 10px;
+  resize: none;
+  width: calc(100% - 52px) !important;
+  -webkit-transition: all .25s ease-in-out;
+     -moz-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+}
+.box.update,
+.box.text {
+  border: 1px solid #E0E1E4;
+  box-shadow: none;
+  padding: 20px 0 0;
+}
+.box.update > .box-header,
+.box.text > .box-header {
+  padding: 0 30px;
+}
+.box.update > .box-header > span,
+.box.text > .box-header > span{
+  background: transparent;
+  color: #9298A4;
+  font-size: 32px;
+  margin: -10px auto 0;
+}
+.box.update > .box-content > .content > p,
+.box.text > .box-content > .content > p {
+  border-top: 1px solid #F4F4F4;
+  color: #4D5057;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 26px 30px;
+}
+.box.update > .box-content > .content > .img {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: initial;
+}
+.box.update > .box-content > .content > .img:before {
+  border: 1px solid rgba(0,0,0,.25);
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.box.text > .box-buttons > .row > button {
+  font-size: 13px;
+}
+.box.text > .box-buttons > .row > button > span {
+  font-size: 20px;
+}
+.box.image > .box-new-comment > .content,
+.box.image > .box-new-comment > .content > .row > textarea,
+.box.video > .box-new-comment > .content,
+.box.video > .box-new-comment > .content > .row > textarea {
+  background: #9298A4;
+  -webkit-transition: all .25s ease-in-out;
+     -moz-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;  
+}
+.box > .box-new-comment > .content > .row > textarea:focus,
+.box.image > .box-new-comment > .content:active > .row {background: #FFF;}
+.box > .box-new-comment > .content > .row > textarea:focus,
+.box.video  .box-new-comment > .content:active > .row {background: #FFF;}
+	</style>
+</head>
+<body class="nav-md theme-green">
+<!-- /site head -->
+
+    <div class="main-container">
+
+        <!-- sidebar -->
+        <div class="sidebar">
+            <div class="scroll-wrapper">
+                <div class="navbar nav-title">
+                    <a href="index.html" class="site-title navbar-brand site-logo">
+                        <img src="img/logo.png" alt="logo" class="img-responsive">
+                    </a>
+                </div>
+                <div class="nav toggle">
+                    <a href="javascript:void(0)" id="sidebar-menu-toggle" class="btn btn-circle ripple">
+                       <i class="fa fa-times"></i>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+                <!-- menu profile quick info -->
+                <div class="profile clearfix">
+                    <div class="profile-pic">
+                        <img src="img/avatar.png" alt="Profile picture" class="rounded-circle profile-img">
+                    </div>
+                    <div class="profile-info">
+                        <h2>James Mcavoy</h2>
+                    </div>
+                </div>
+                <!-- /menu profile quick info -->
+        
+                <!-- search -->
+                <div class="search-wrap d-sm-none clearfix text-center">
+                    <form autocomplete="on">
+                        <input class="search" name="search" type="text" placeholder="What're we looking for?">
+                        <div>
+                            <button class="search-submit" value="Rechercher" type="submit"> <i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /search -->
+        
+               <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main-menu-wrapper">
+                    <div class="menu-section">
+                        <ul class="nav side-menu flex-column">
+                            <li class="nav-item">
+                                <a href="index.html" title="Manage App User">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                    <span>User Dashboard</span>
+                                </a>
+                            </li>
+							<li class="nav-item">
+                                <a href="manage-app-user.html" class="ripple" title="Manage App User">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>Manage App User</span>
+                                    <!--<span class="fa fa-chevron-right"></span>-->
+                                </a>
+                            </li>
+                            <li class="nav-item has-child">
+                                <a href="manage-country.html" class="ripple" title="Manage Country">
+                                    <i class="fa fa-flag" aria-hidden="true"></i>
+                                    <span>Manage Country</span>
+                                    <!--<span class="fa fa-chevron-right"></span>-->
+                                </a>
+                                <!--<ul class="nav child-menu">
+                                    <li class="child-menu-title">UI Elements</li>
+                                    <li><a href="ui-colors.html">Colors</a></li>
+                                    <li><a href="ui-typography.html">Typography</a></li>
+                                    <li><a href="ui-buttons.html">Buttons</a></li>
+                                    <li><a href="ui-cards.html">Cards</a></li>
+                                    <li><a href="ui-tabs-accordions.html">Tabs & Accordions</a></li>
+                                    <li><a href="ui-modals.html">Modals</a></li>
+                                    <li><a href="ui-progress-bars.html">Progress Bars</a></li>
+                                    <li><a href="ui-notifications.html">Notifications</a></li>
+                                    <li><a href="ui-images.html">Images</a></li>
+                                    <li><a href="ui-carousel.html">Carousel</a></li>
+                                    <li><a href="ui-sliders.html">Sliders</a></li>
+                                </ul>-->
+                            </li>
+                            <li class="nav-item has-child">
+                                <a href="manage-emoji.html" class="ripple" title="Manage Emoji">
+                                    <i class="fa fa-smile-o" aria-hidden="true"></i>
+                                    <span>Manage Emoji</span>
+                                    <!--<span class="fa fa-chevron-right" aria-hidden="true"></span>--->
+                                </a>
+                                <!--<ul class="nav child-menu">
+                                    <li class="child-menu-title">Tables</li>
+                                    <li><a href="basic-tables.html">Basic Tables</a></li>
+                                    <li><a href="data-tables.html">Data Tables</a></li>
+                                </ul>-->
+                            </li>
+                            <li class="nav-item has-child">
+                                <a href="manage-trending.html" class="ripple" title="Manage Trending">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                    <span>Manage Trending</span>
+                                    <!--<span class="fa fa-chevron-right" aria-hidden="true"></span>-->
+                                </a>
+                                <!--<ul class="nav child-menu">
+                                    <li class="child-menu-title">Icons</li>
+                                    <li><a href="icons-material.html">Material Design</a></li>
+                                    <li><a href="icons-fontawesome.html">Font awesome</a></li>
+                                </ul>-->
+                            </li>
+                            <li class="nav-item has-child">
+                                <a href="javascript:void(0);" class="ripple" title="Manage Content">
+                                    <i class="fa fa-file-word-o" aria-hidden="true"></i>
+                                    <span>Manage Content</span>
+                                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                                </a>
+                                <ul class="nav child-menu">
+                                    <!--<li class="child-menu-title">Images</li>-->
+                                    <li><a href="manage-content-images.html">Images</a></li>
+                                    <li><a href="manage-content-videos.html">Video</a></li>
+                                    <!--<li><a href="form-layouts.html">Form Layouts</a></li>
+                                    <li><a href="form-wizard.html">Form Wizard</a></li>-->
+                                </ul>
+                            </li>
+                            <li class="nav-item has-child">
+                                <a href="manage-reported-post.html" class="ripple" title="Manage Reported Post">
+                                    <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>
+                                    <span>Manage Reported Post</span>
+                                    <!--<span class="fa fa-chevron-right"></span>-->
+                                </a>
+                                <!--<ul class="nav child-menu">
+                                    <li class="child-menu-title">Extras</li>
+                                    <li><a href="403-error.html">403 Error</a></li>
+                                    <li><a href="404-error.html">404 Error</a></li>
+                                    <li><a href="500-error.html">500 Error</a></li>
+                                    <li><a href="invoice.html">Invoice</a></li>
+                                    <li class="has-child">
+                                        <a href="javascript:void(0);" title="Login">
+                                            <span>Login</span>
+                                            <span class="fa fa-chevron-right"></span>
+                                        </a>
+                                        <ul class="nav child-menu">
+                                            <li><a href="login.html">Login V1</a></li>
+                                            <li><a href="loginV2.html">Login V2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-child">
+                                        <a href="javascript:void(0);" title="Register">
+                                            <span>Register</span>
+                                            <span class="fa fa-chevron-right"></span>
+                                        </a>
+                                        <ul class="nav child-menu">
+                                            <li><a href="register.html">Register V1</a></li>
+                                            <li><a href="registerV2.html">Register V2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="lockscreen.html">Lockscreen</a></li>
+                                    <li><a href="recover-password.html">Recover Password</a></li>
+                                    <li><a href="user-profile.html">User Profile</a></li>
+                                    <li class="has-child">
+                                        <a href="javascript:void(0);" title="Email Templates">
+                                            <span>Email Templates</span>
+                                            <span class="fa fa-chevron-right"></span>
+                                        </a>
+                                        <ul class="nav child-menu">
+                                            <li><a href="email-template-basic.html">Email Template Basic</a></li>
+                                            <li><a href="email-template-alert.html">Email Template Alert</a></li>
+                                            <li><a href="email-template-billing.html">Email Template Billing</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-child">
+                                        <a href="javascript:void(0);" title="Coming Soon">
+                                            <span>Coming Soon</span>
+                                            <span class="fa fa-chevron-right"></span>
+                                        </a>
+                                        <ul class="nav child-menu">
+                                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                                            <li><a href="coming-soonV2.html">Coming Soon V2</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>-->
+                            </li>
+                            <li class="nav-item has-child">
+                                <a href="javascript:void(0);" class="ripple" title="Manage CMS Page">
+                                    <i class="fa fa-file" aria-hidden="true"></i>
+                                    <span>Manage CMS Page</span>
+                                    <span class="fa fa-chevron-right"></span>
+                                </a>
+                                <ul class="nav child-menu">
+                                    <!--<li class="child-menu-title"></li>-->
+                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="about-us.html">About us</a></li>
+									<li><a href="legal-disclaimer.html">Legal Disclaimer</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="setting.html" title="Setting">
+                                    <i class="fa fa fa-cog" aria-hidden="true"></i>
+                                    <span>Setting</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /sidebar menu -->
+            </div>
+        </div>
+        <!-- /sidebar -->
+
+        <div class="content-wrapper">
+
+            <!-- header content  -->
+            <header class="header">
+                <nav class="header-menu">
+                    <div class="nav toggle">
+                        <a href="javascript:void(0)" id="menu-toggle" class="ripple">
+                            <span class="bars"></span>
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="search-wrap d-sm-none d-md-none">
+                            <form autocomplete="on">
+                                <input type="text" name="search" class="search" placeholder="What're we looking for?">
+                                <div>
+                                    <button class="search-submit" value="" type="submit"> <i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </form>
+                        </li>
+                        <li role="presentation" class="dropdown notifications-list">
+                            <a href="javascript:void(0)" class="dropdown-toggle info-number ripple" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="badge">6</span>
+                            </a>
+                            <ul id="menu" class="dropdown-menu list-unstyled dropdown-menu-lg" role="menu">
+                                <li class="notif-title"> Notifications
+                                    <button type="button" class="float-right close btn btn-circle d-none d-block-xs"><i class="fa fa-close"></i></button>
+                                </li>
+                                <li class="list-group notification-list">
+                                  <ul class="p-0">
+                                      <!-- list item-->
+                                      <li class="list-group-item">
+                                          <a href="javascript:void(0);">
+                                              <div class="m-r-10 notif-img float-left">
+                                                  <i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i>
+                                              </div>
+                                              <div class="notif-info d-flex align-items-center justify-content-between"><p class="text-danger notif-text">98% Server Load</p>
+                                                  <span class="time">12 min ago</span>
+                                              </div>
+                                          </a>
+                                      </li>
+                                      <!-- list item-->
+                                      <li class="list-group-item">
+                                          <a href="javascript:void(0);">
+                                              <div class="m-r-10 notif-img float-left">
+                                                  <i class="fa fa-exclamation-triangle text-warning " aria-hidden="true"></i>
+                                              </div>
+                                              <div class="notif-info d-flex align-items-center justify-content-between"><p class="text-warning notif-text">Warning Notification</p>
+                                                  <span class="time">12 min ago</span>
+                                              </div>
+                                          </a>
+                                      </li>
+                                      <!-- list item-->
+                                      <li class="list-group-item">
+                                          <a href="javascript:void(0);">
+                                              <div class="m-r-10 notif-img float-left">
+                                                  <i class="fa fa-check-circle text-success" aria-hidden="true"></i>
+                                              </div>
+                                              <div class="notif-info d-flex align-items-center justify-content-between"><p class="text-success notif-text">Success Notification</p>
+                                                <span class="time">12 min ago</span>
+                                              </div>
+                                          </a>
+                                      </li>
+            
+                                  </ul>
+                                </li>
+                                <li class="read-all-notif"><a href="javascript:void(0)">Read all notifications<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </li>
+                        <li class="profile-dropdown dropdown">
+                            <a href="javascript:void(0)" class="user-profile dropdown-toggle ripple" data-toggle="dropdown" aria-expanded="false">
+                                <img src="img/avatar.png" alt="Profile picture" class="rounded-circle">
+                                <span class="d-none d-sm-block">James Mcavoy</span>
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu float-right">
+                                <li class="d-none d-block-xs p-0">
+                                    <button type="button" class="close btn btn-circle"><i class="fa fa-close"></i></button>
+                                    <div class="profile clearfix">
+                                        <div class="profile-pic">
+                                            <img src="img/avatar.png" alt="Profile picture" class="rounded-circle profile-img">
+                                        </div>
+                                        <div class="profile-info">
+                                            <h2>James Mcavoy</h2>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="user-profile.html"><i class="fa fa-user-o" aria-hidden="true"></i>Profile</a></li>
+                                <!--<li><a href="javascript:void(0)"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
+                                <li><a href="lockscreen.html"><i class="fa fa-lock" aria-hidden="true"></i> Lock screen</a></li>-->
+                                <li class="divider"></li>
+                                <li><a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- /header content -->
+
+            <!-- theme settings-->
+            <div class="settings-wrapper builder d-none d-md-block" id="builder">
+                <div class="p-l-20 p-r-20">
+                    <!--<a id="builder-close" class="builder-close settings-toggle" href="javascript:void(0)" title="Close">
+                        <i class="fa fa-close" aria-hidden="true"></i>
+                    </a>
+                    <a id="builder-toggle" class="builder-toggle" title="Settings">
+                        <i class="fa fa-cog fa-spin" aria-hidden="true"></i>
+                    </a>-->
+                    <ul class="nav nav-tabs nav-tabs-simple nav-tabs-simple-bottom nav-justified" id="settingsTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="layouts-tab" data-toggle="tab" href="#layouts" role="tab" aria-controls="layouts" aria-expanded="true">Layout settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="colors-tab" data-toggle="tab" href="#colors" role="tab" aria-controls="colors" aria-expanded="false">Custom Colors</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="settingsTabContent">
+                        <div role="tabpanel" class="tab-pane fade active show" id="layouts" aria-labelledby="layouts-tab" aria-expanded="true">
+                            <div class="scroll-wrapper">
+                                <div class="scroll-content">
+                                    <div>
+                                        <h5 class="semi-bold">
+                                            Layout color options
+                                        </h5>
+                                        <div class="sidebar-settings m-b-10">
+                                            <p class="hint-text mb-0">
+                                                Sidebar color.
+                                            </p>
+                                            <button type="button" class="btn btn-outline-primary btn-activate-sidebar mt-2 active" title="Light Sidebar" id="activate-light-sidebar">
+                                                Light
+                                            </button>
+                                            <button type="button" class="btn btn-outline-primary btn-activate-sidebar mt-2" title="Dark Sidebar" id="activate-dark-sidebar">
+                                                Dark
+                                            </button>
+                                        </div>
+                                        <div class="header-settings m-b-10">
+                                            <p class="hint-text mb-0">
+                                                Header color.
+                                            </p>
+                                            <button type="button" class="btn btn-outline-info btn-activate-header mt-2" title="Light Header" id="activate-light-header">
+                                                Light
+                                            </button>
+                                            <button type="button" class="btn btn-outline-info btn-activate-header mt-2 active" title="Dark Header" id="activate-dark-header">
+                                                Dark
+                                            </button>
+                                        </div>
+            
+                                        <div class="m-b-10">
+                                            <p class="hint-text mb-0">
+                                                Main color of your theme
+                                            </p>
+                                            <button type="button" class="btn btn-outline-green btn-activate-color btn-raised mt-2 btn-circle active" id="activate-green" title="Green">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-purple btn-activate-color btn-raised mt-2 btn-circle" id="activate-purple" title="Purple">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-red btn-activate-color btn-raised mt-2 btn-circle" id="activate-red" title="Red">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-cyan btn-activate-color btn-raised mt-2 btn-circle" id="activate-cyan" title="Cyan">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-orange btn-activate-color btn-raised mt-2 btn-circle" id="activate-orange" title="Orange">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-grey btn-activate-color btn-raised mt-2 btn-circle" id="activate-grey" title="Grey">
+                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                            </button>
+                                            <p class="hint-text mt-2">Pick a Custom Theme Color</p>
+                                            <input class="jscolor form-control btn-activate-color d-inline-block" id="activate-custom" value="4DD0E1" title="Pick a custom theme color">
+                                        </div>
+                                        <h5 class="semi-bold">
+                                            Layout view options
+                                        </h5>
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-12">
+                                                <div class="card box-shadow-none">
+                                                    <div class="card-body p-0">
+                                                        <h5 class="card-title hint-text">Fixed full width header</h5>
+                                                        <div class="layout-view layout-view-fixed-header d-flex align-items-center justify-content-center"
+                                                             id="activate-fixed-header"
+                                                             title="Activate Fixed Full Width Header">
+                                                            <button type="button" class="card-link btn btn-theme btn-activate mt-2"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                            <div class="col-md-12 col-lg-12">
+                                                <div class="card box-shadow-none">
+                                                    <div class="card-body p-0">
+                                                        <h5 class="card-title hint-text">Left sidebar</h5>
+                                                        <div class="layout-view active layout-view-left-sidebar d-flex align-items-center justify-content-center"
+                                                             id="activate-left-sidebar"
+                                                             title="Activate Left Sidebar">
+                                                            <button type="button" class="card-link btn btn-theme btn-activate mt-2"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                            <div class="col-md-12 col-lg-12">
+                                                <div class="card box-shadow-none">
+                                                    <div class="card-body p-0">
+                                                        <h5 class="card-title hint-text">Right sidebar</h5>
+                                                        <div class="layout-view layout-view-right-sidebar d-flex align-items-center justify-content-center"
+                                                             id="activate-right-sidebar"
+                                                             title="Activate Right Sidebar">
+                                                            <button type="button" class="card-link btn btn-theme btn-activate mt-2"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-lg-12">
+                                                <div class="card box-shadow-none mb-0">
+                                                    <div class="card-body p-0">
+                                                        <h5 class="card-title hint-text">RTL Content</h5>
+                                                        <div class="layout-view layout-view-rtl-content d-flex align-items-center justify-content-center"
+                                                             id="activate-rtl-content"
+                                                             title="Activate RTL Content">
+                                                            <button type="button" class="card-link btn btn-theme btn-activate activate-rtl mt-2"></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="colors" role="tabpanel" aria-labelledby="colors-tab" aria-expanded="false">
+                            <div class="scroll-wrapper">
+                                <div class="scroll-content">
+                                    <div>
+                                        <h5 class="semi-bold">
+                                            Color Options
+                                        </h5>
+                                        <p class="hint-text">
+                                            Customize colors of your theme.
+                                        </p>
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-between align-items-center color-settings-row">
+                                                    <div>
+                                                        <label>Pick a primary background color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="primary-color" value="6d5cae" title="Pick a primary background color">
+                                                        <label>Pick a primary text color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="primary-text-color" value="ffffff" title="Pick a primary text color">
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                      <button class="btn mt-1 btn-prev" id="btn-primary-prev" title="Preview of primary color">Primary</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-between align-items-center color-settings-row">
+                                                    <div>
+                                                        <label>Pick a secondary background color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="secondary-color" value="cfd0d2" title="Pick a secondary background color">
+                                                        <label>Pick a secondary text color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="secondary-text-color" value="ffffff" title="Pick a secondary text color">
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn mt-1 btn-prev" id="btn-secondary-prev" title="Preview of secondary color">Secondary</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-between align-items-center color-settings-row">
+                                                    <div>
+                                                        <label>Pick a success background color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="success-color" value="0aa89e" title="Pick a success background color">
+                                                        <label>Pick a success text color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="success-text-color" value="ffffff" title="Pick a success text color">
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn mt-1 btn-prev" id="btn-success-prev" title="Preview of success color">Success</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+            
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-between align-items-center color-settings-row">
+                                                    <div>
+                                                        <label>Pick a info background color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="info-color" value="4DD0E1" title="Pick a info background color">
+                                                        <label>Pick a info text color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="info-text-color" value="ffffff" title="Pick a info text color">
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn mt-1 btn-prev" id="btn-info-prev" title="Preview of info color">Info</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-between align-items-center color-settings-row">
+                                                    <div>
+                                                        <label>Pick a warning background color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="warning-color" value="ffaa00" title="Pick a warning background color">
+                                                        <label>Pick a warning text color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="warning-text-color" value="ffffff" title="Pick a warning text color">
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn mt-1 btn-prev" id="btn-warning-prev" title="Preview of warning color">Warning</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-between align-items-center color-settings-row">
+                                                    <div>
+                                                        <label>Pick a danger background color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="danger-color" value="e43a45" title="Pick a danger background color">
+                                                        <label>Pick a danger text color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="danger-text-color" value="ffffff" title="Pick a danger text color">
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn mt-1 btn-prev" id="btn-danger-prev" title="Preview of danger color">Danger</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="row mb-2">
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-between align-items-center color-settings-row">
+                                                    <div>
+                                                        <label>Pick a light background color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="light-color" value="eaeef3" title="Pick a light background color">
+                                                        <label>Pick a light text color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="light-text-color" value="8e959d" title="Pick a light text color">
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn mt-1 btn-prev" id="btn-light-prev" title="Preview of light color">Light</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-between align-items-center color-settings-row">
+                                                    <div>
+                                                        <label>Pick a dark background color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="dark-color" value="8e959d" title="Pick a dark background color">
+                                                        <label>Pick a dark text color</label>
+                                                        <input class="jscolor {position:'left'} form-control" id="dark-text-color" value="ffffff" title="Pick a dark text color">
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn mt-1 btn-prev" id="btn-dark-prev" title="Preview of dark color">Dark</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fixed-bottom-buttons">
+                        <div class="mt-2">
+                            <button type="button" id="btnOpenSaveSettingsModal" class="btn btn-theme btn-raised" data-toggle="modal" data-target="#save-settings-modal" title="Save Settings">
+                                <i class="fa fa-check left" aria-hidden="true"></i><span>Save</span>
+                            </button>
+                            <button type="button" class="btn btn-theme btn-raised" id="btnPrevSettings" title="Preview Settings">
+                                <i class="fa fa-clone left" aria-hidden="true"></i><span>Preview</span>
+                            </button>
+                            <button type="button" class="btn btn-light btn-raised" id="btnCancelSettings" title="Cancel Settings">
+                                <i class="fa fa-ban left" aria-hidden="true"></i><span>Cancel</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Settings Modal -->
+            <div class="modal fade" id="save-settings-modal" tabindex="-1" role="dialog" aria-labelledby="SaveModal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="SaveModal">Save Settings</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <p>If you want to get this view in the project, you should change <code>body</code> classlist to this</p>
+                                <p id="customized-body-classlist" class="font-weight-bold"></p>
+                            </div>
+                           <div>
+                               <p>If you want to use these colors in the template, you should find and replace the code of this file <span class="text-success">src/sass/partials/default-colors.sass</span> to this code</p>
+                               <p id="customized-css" class="font-weight-bold"></p>
+                           </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-theme" id="btnSaveSettings">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /theme settings -->
+
+            <!-- page content -->
+            <div class="main-content small-gutter">
+                <!-- START PAGE COVER -->
+                <div class="row bg-title clearfix page-title">
+                    <div class="col-12 col-lg-3">
+                        <h4 class="page-title">Manage Images</h4>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <!-- START breadcrumb -->
+                        <ol class="breadcrumb pl-0 pr-0 float-lg-right">
+                            <li><a href="index.html">User Dashboard</a></li>
+                            <li class="active">Manage Images</li>
+                        </ol>
+                        <!-- END breadcrum -->
+                    </div>
+                    <!--<div class="col-12">
+                        <h3>Form Layouts</h3>
+                    </div>-->
+                </div>
+                <!-- END PAGE COVER -->
+                <div class="container-fluid">
+                    <div class="row">
+                        
+						
+					<div class="col-lg-12 col-xl-12 mb-2">
+                            <div class="bg-white padding-25 h-100">
+                                <h4 class="mt-0 box-title">Images List</h4>
+                                <div class="data-table-wrapper">
+                                    <div class="row">
+                                        <!--<div class="col-sm-12 col-lg-4 col-xl-6">
+                                            <div class="data-table-filter mb-2 float-sm-left float-lg-none d-lg-inline-block">
+                                                <label for="search1">Search:</label>
+                                                <input type="search" class="form-control" id="search1">
+                                            </div>
+                                        </div>
+										<div class="col-sm-12 col-lg-4 col-xl-4">
+                                            <div class="data-table-length">
+                                                <label>
+                                                    Show
+                                                    <select aria-controls="example" class="form-control">
+                                                        <option value="10">10</option>
+                                                        <option value="25">25</option>
+                                                        <option value="50">50</option>
+                                                        <option value="100">100</option>
+                                                    </select>
+                                                    entries
+                                                </label>
+                                            </div>
+                                        </div>-->
+                                        <div class="col-sm-12 col-lg-4 col-xl-12 text-md-right">
+                                            
+                                            <div class="actions ml-md-3 mb-2 text-sm-right d-lg-inline-block sp-button">
+												
+												<button id="get_ids_for_delete" class="btn btn-danger btn-raised ripple">
+													<span>Delete Images</span>
+												</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table-responsive sanjeev-table">
+                                                <table id="example2" class="table table-striped table-bordered data-table table-checkable mb-0" role="grid">
+                                                    <thead>
+                                                    <tr>
+                                                        <th tabindex="0" aria-controls="example" rowspan="1" colspan="1">
+                                                            <div class="form-check">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" id="tableCheckbox1">
+                                                                    <label class="custom-control-label" for="tableCheckbox1"></label>
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <th tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending">
+                                                            
+                                                        </th>
+                                                        
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                          <div class="form-check">
+                                                                <div class="custom-control custom-checkbox custom-checkbox-primary">
+                                                                    <input type="checkbox" class="custom-control-input checkitem" id="tableCheckbox222">
+                                                                    <label class="custom-control-label" for="tableCheckbox222"></label>
+                                                                </div>
+                                                            </div>  
+                                                        </td>
+                                                        <td>
+															<div class="box update">
+      <div class="box-header">
+        <h3><a href=""><img src="https://goo.gl/oOD0V2" alt="">Roswell Parian</a>
+          <span>March 21,18:45pm <i class="fa fa-globe"></i></span>
+        </h3>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <div class="window"><span></span></div>
+      </div>
+      <div class="box-content">
+        <div class="content">
+          <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur,</p>
+          <div class="img"><img style="width:100%!important; height:100% !important;" src="https://goo.gl/g0Xdh3" alt=""></div>
+        </div>
+      </div>
+      <div class="box-likes">
+        <div class="row">
+          <span><a href="#"><img src="https://goo.gl/oM0Y8G" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/vswgSn" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/4W27eB" alt=""></a></span>
+          <span><a href="#">+99</a></span>
+          <span>Like this</span>
+        </div>
+        <div class="row">
+          <span>145 comments</span>
+        </div>
+      </div>
+      <div class="box-buttons">
+        <div class="row">
+          <button><span class="fa fa-thumbs-up"></span></button>
+          <button><span class="fa fa-comments-o"></span></button>
+          <button><span class="fa fa-share-alt"></span></button>
+        </div>
+      </div>
+      <div class="box-click"><span><i class="fa fa-comments-o"></i> View 140 more comments</span></div>
+      <div class="box-comments">
+        <!--<div class="comment"><img src="https://goo.gl/oM0Y8G" alt="">
+          <div class="content">
+            <h3><a href="">Emily Rudd</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The nature is wonderfull, :D loll </p>
+          </div>
+        </div>
+        <div class="comment"><img src="https://goo.gl/vswgSn" alt="">
+          <div class="content">
+            <h3><a href="">barbara Palvin</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The Image is awesome, &lt;3 Nice Photo</p>
+          </div>
+        </div>-->
+      </div>
+        <div class="box-new-comment">
+          <img src="https://goo.gl/oOD0V2" alt="">
+          <div class="content">
+            <div class="row">
+              <textarea placeholder="write a comment..."></textarea>
+            </div>
+            <div class="row">
+              <span class="ion-android-attach"></span>
+              <span class="fa fa-smile-o"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+														</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <div class="form-check">
+                                                                <div class="custom-control custom-checkbox custom-checkbox-primary">
+                                                                    <input type="checkbox" class="custom-control-input checkitem" id="tableCheckbox22222">
+                                                                    <label class="custom-control-label" for="tableCheckbox22222"></label>
+                                                                </div>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+															<div class="box update">
+      <div class="box-header">
+        <h3><a href=""><img src="https://goo.gl/oOD0V2" alt="">Roswell Parian</a>
+          <span>March 21,18:45pm <i class="fa fa-globe"></i></span>
+        </h3>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <div class="window"><span></span></div>
+      </div>
+      <div class="box-content">
+        <div class="content">
+          <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur,</p>
+          <div class="img"><img style="width:100%!important; height:100% !important;" src="https://goo.gl/g0Xdh3" alt=""></div>
+        </div>
+      </div>
+      <div class="box-likes">
+        <div class="row">
+          <span><a href="#"><img src="https://goo.gl/oM0Y8G" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/vswgSn" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/4W27eB" alt=""></a></span>
+          <span><a href="#">+99</a></span>
+          <span>Like this</span>
+        </div>
+        <div class="row">
+          <span>145 comments</span>
+        </div>
+      </div>
+      <div class="box-buttons">
+        <div class="row">
+          <button><span class="fa fa-thumbs-up"></span></button>
+          <button><span class="fa fa-comments-o"></span></button>
+          <button><span class="fa fa-share-alt"></span></button>
+        </div>
+      </div>
+      <div class="box-click"><span><i class="fa fa-comments-o"></i> View 140 more comments</span></div>
+      <div class="box-comments">
+        <!--<div class="comment"><img src="https://goo.gl/oM0Y8G" alt="">
+          <div class="content">
+            <h3><a href="">Emily Rudd</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The nature is wonderfull, :D loll </p>
+          </div>
+        </div>
+        <div class="comment"><img src="https://goo.gl/vswgSn" alt="">
+          <div class="content">
+            <h3><a href="">barbara Palvin</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The Image is awesome, &lt;3 Nice Photo</p>
+          </div>
+        </div>-->
+      </div>
+        <div class="box-new-comment">
+          <img src="https://goo.gl/oOD0V2" alt="">
+          <div class="content">
+            <div class="row">
+              <textarea placeholder="write a comment..."></textarea>
+            </div>
+            <div class="row">
+              <span class="ion-android-attach"></span>
+              <span class="fa fa-smile-o"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+														</td>
+														</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <div class="form-check">
+                                                                <div class="custom-control custom-checkbox custom-checkbox-primary">
+                                                                    <input type="checkbox" class="custom-control-input checkitem" id="tableCheckbox111">
+                                                                    <label class="custom-control-label" for="tableCheckbox111"></label>
+                                                                </div>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+															<div class="box update">
+      <div class="box-header">
+        <h3><a href=""><img src="https://goo.gl/oOD0V2" alt="">Roswell Parian</a>
+          <span>March 21,18:45pm <i class="fa fa-globe"></i></span>
+        </h3>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <div class="window"><span></span></div>
+      </div>
+      <div class="box-content">
+        <div class="content">
+          <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur,</p>
+          <div class="img"><img style="width:100%!important; height:100% !important;" src="https://goo.gl/g0Xdh3" alt=""></div>
+        </div>
+      </div>
+      <div class="box-likes">
+        <div class="row">
+          <span><a href="#"><img src="https://goo.gl/oM0Y8G" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/vswgSn" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/4W27eB" alt=""></a></span>
+          <span><a href="#">+99</a></span>
+          <span>Like this</span>
+        </div>
+        <div class="row">
+          <span>145 comments</span>
+        </div>
+      </div>
+      <div class="box-buttons">
+        <div class="row">
+          <button><span class="fa fa-thumbs-up"></span></button>
+          <button><span class="fa fa-comments-o"></span></button>
+          <button><span class="fa fa-share-alt"></span></button>
+        </div>
+      </div>
+      <div class="box-click"><span><i class="fa fa-comments-o"></i> View 140 more comments</span></div>
+      <div class="box-comments">
+        <!--<div class="comment"><img src="https://goo.gl/oM0Y8G" alt="">
+          <div class="content">
+            <h3><a href="">Emily Rudd</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The nature is wonderfull, :D loll </p>
+          </div>
+        </div>
+        <div class="comment"><img src="https://goo.gl/vswgSn" alt="">
+          <div class="content">
+            <h3><a href="">barbara Palvin</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The Image is awesome, &lt;3 Nice Photo</p>
+          </div>
+        </div>-->
+      </div>
+        <div class="box-new-comment">
+          <img src="https://goo.gl/oOD0V2" alt="">
+          <div class="content">
+            <div class="row">
+              <textarea placeholder="write a comment..."></textarea>
+            </div>
+            <div class="row">
+              <span class="ion-android-attach"></span>
+              <span class="fa fa-smile-o"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+														</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <div class="form-check">
+                                                                <div class="custom-control custom-checkbox custom-checkbox-primary">
+                                                                    <input type="checkbox" class="custom-control-input checkitem" id="tableCheckbox33">
+                                                                    <label class="custom-control-label" for="tableCheckbox33"></label>
+                                                                </div>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+															<div class="box update">
+      <div class="box-header">
+        <h3><a href=""><img src="https://goo.gl/oOD0V2" alt="">Roswell Parian</a>
+          <span>March 21,18:45pm <i class="fa fa-globe"></i></span>
+        </h3>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <div class="window"><span></span></div>
+      </div>
+      <div class="box-content">
+        <div class="content">
+          <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur,</p>
+          <div class="img"><img style="width:100%!important; height:100% !important;" src="https://goo.gl/g0Xdh3" alt=""></div>
+        </div>
+      </div>
+      <div class="box-likes">
+        <div class="row">
+          <span><a href="#"><img src="https://goo.gl/oM0Y8G" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/vswgSn" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/4W27eB" alt=""></a></span>
+          <span><a href="#">+99</a></span>
+          <span>Like this</span>
+        </div>
+        <div class="row">
+          <span>145 comments</span>
+        </div>
+      </div>
+      <div class="box-buttons">
+        <div class="row">
+          <button><span class="fa fa-thumbs-up"></span></button>
+          <button><span class="fa fa-comments-o"></span></button>
+          <button><span class="fa fa-share-alt"></span></button>
+        </div>
+      </div>
+      <div class="box-click"><span><i class="fa fa-comments-o"></i> View 140 more comments</span></div>
+      <div class="box-comments">
+        <!--<div class="comment"><img src="https://goo.gl/oM0Y8G" alt="">
+          <div class="content">
+            <h3><a href="">Emily Rudd</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The nature is wonderfull, :D loll </p>
+          </div>
+        </div>
+        <div class="comment"><img src="https://goo.gl/vswgSn" alt="">
+          <div class="content">
+            <h3><a href="">barbara Palvin</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The Image is awesome, &lt;3 Nice Photo</p>
+          </div>
+        </div>-->
+      </div>
+        <div class="box-new-comment">
+          <img src="https://goo.gl/oOD0V2" alt="">
+          <div class="content">
+            <div class="row">
+              <textarea placeholder="write a comment..."></textarea>
+            </div>
+            <div class="row">
+              <span class="ion-android-attach"></span>
+              <span class="fa fa-smile-o"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+														</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <div class="form-check">
+                                                                <div class="custom-control custom-checkbox custom-checkbox-primary">
+                                                                    <input type="checkbox" class="custom-control-input checkitem" id="tableCheckbox44">
+                                                                    <label class="custom-control-label" for="tableCheckbox44"></label>
+                                                                </div>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+															<div class="box update">
+      <div class="box-header">
+        <h3><a href=""><img src="https://goo.gl/oOD0V2" alt="">Roswell Parian</a>
+          <span>March 21,18:45pm <i class="fa fa-globe"></i></span>
+        </h3>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <div class="window"><span></span></div>
+      </div>
+      <div class="box-content">
+        <div class="content">
+          <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur,</p>
+          <div class="img"><img style="width:100%!important; height:100% !important;" src="https://goo.gl/g0Xdh3" alt=""></div>
+        </div>
+      </div>
+      <div class="box-likes">
+        <div class="row">
+          <span><a href="#"><img src="https://goo.gl/oM0Y8G" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/vswgSn" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/4W27eB" alt=""></a></span>
+          <span><a href="#">+99</a></span>
+          <span>Like this</span>
+        </div>
+        <div class="row">
+          <span>145 comments</span>
+        </div>
+      </div>
+      <div class="box-buttons">
+        <div class="row">
+          <button><span class="fa fa-thumbs-up"></span></button>
+          <button><span class="fa fa-comments-o"></span></button>
+          <button><span class="fa fa-share-alt"></span></button>
+        </div>
+      </div>
+      <div class="box-click"><span><i class="fa fa-comments-o"></i> View 140 more comments</span></div>
+      <div class="box-comments">
+        <!--<div class="comment"><img src="https://goo.gl/oM0Y8G" alt="">
+          <div class="content">
+            <h3><a href="">Emily Rudd</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The nature is wonderfull, :D loll </p>
+          </div>
+        </div>
+        <div class="comment"><img src="https://goo.gl/vswgSn" alt="">
+          <div class="content">
+            <h3><a href="">barbara Palvin</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The Image is awesome, &lt;3 Nice Photo</p>
+          </div>
+        </div>-->
+      </div>
+        <div class="box-new-comment">
+          <img src="https://goo.gl/oOD0V2" alt="">
+          <div class="content">
+            <div class="row">
+              <textarea placeholder="write a comment..."></textarea>
+            </div>
+            <div class="row">
+              <span class="ion-android-attach"></span>
+              <span class="fa fa-smile-o"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+														</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                          <div class="form-check">
+                                                                <div class="custom-control custom-checkbox custom-checkbox-primary">
+                                                                    <input type="checkbox" class="custom-control-input checkitem" id="tableCheckbox4444">
+                                                                    <label class="custom-control-label" for="tableCheckbox4444"></label>
+                                                                </div>
+                                                            </div>  
+                                                        </td>
+                                                        <td>
+															<div class="box update">
+      <div class="box-header">
+        <h3><a href=""><img src="https://goo.gl/oOD0V2" alt="">Roswell Parian</a>
+          <span>March 21,18:45pm <i class="fa fa-globe"></i></span>
+        </h3>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <div class="window"><span></span></div>
+      </div>
+      <div class="box-content">
+        <div class="content">
+          <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur,</p>
+          <div class="img"><img style="width:100%!important; height:100% !important;" src="https://goo.gl/g0Xdh3" alt=""></div>
+        </div>
+      </div>
+      <div class="box-likes">
+        <div class="row">
+          <span><a href="#"><img src="https://goo.gl/oM0Y8G" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/vswgSn" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/4W27eB" alt=""></a></span>
+          <span><a href="#">+99</a></span>
+          <span>Like this</span>
+        </div>
+        <div class="row">
+          <span>145 comments</span>
+        </div>
+      </div>
+      <div class="box-buttons">
+        <div class="row">
+          <button><span class="fa fa-thumbs-up"></span></button>
+          <button><span class="fa fa-comments-o"></span></button>
+          <button><span class="fa fa-share-alt"></span></button>
+        </div>
+      </div>
+      <div class="box-click"><span><i class="fa fa-comments-o"></i> View 140 more comments</span></div>
+      <div class="box-comments">
+        <!--<div class="comment"><img src="https://goo.gl/oM0Y8G" alt="">
+          <div class="content">
+            <h3><a href="">Emily Rudd</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The nature is wonderfull, :D loll </p>
+          </div>
+        </div>
+        <div class="comment"><img src="https://goo.gl/vswgSn" alt="">
+          <div class="content">
+            <h3><a href="">barbara Palvin</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The Image is awesome, &lt;3 Nice Photo</p>
+          </div>
+        </div>-->
+      </div>
+        <div class="box-new-comment">
+          <img src="https://goo.gl/oOD0V2" alt="">
+          <div class="content">
+            <div class="row">
+              <textarea placeholder="write a comment..."></textarea>
+            </div>
+            <div class="row">
+              <span class="ion-android-attach"></span>
+              <span class="fa fa-smile-o"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+														</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <div class="form-check">
+                                                                <div class="custom-control custom-checkbox custom-checkbox-primary">
+                                                                    <input type="checkbox" class="custom-control-input checkitem" id="tableCheckbox55">
+                                                                    <label class="custom-control-label" for="tableCheckbox55"></label>
+                                                                </div>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+															<div class="box update">
+      <div class="box-header">
+        <h3><a href=""><img src="https://goo.gl/oOD0V2" alt="">Roswell Parian</a>
+          <span>March 21,18:45pm <i class="fa fa-globe"></i></span>
+        </h3>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <div class="window"><span></span></div>
+      </div>
+      <div class="box-content">
+        <div class="content">
+          <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur,</p>
+          <div class="img"><img style="width:100%!important; height:100% !important;" src="https://goo.gl/g0Xdh3" alt=""></div>
+        </div>
+      </div>
+      <div class="box-likes">
+        <div class="row">
+          <span><a href="#"><img src="https://goo.gl/oM0Y8G" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/vswgSn" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/4W27eB" alt=""></a></span>
+          <span><a href="#">+99</a></span>
+          <span>Like this</span>
+        </div>
+        <div class="row">
+          <span>145 comments</span>
+        </div>
+      </div>
+      <div class="box-buttons">
+        <div class="row">
+          <button><span class="fa fa-thumbs-up"></span></button>
+          <button><span class="fa fa-comments-o"></span></button>
+          <button><span class="fa fa-share-alt"></span></button>
+        </div>
+      </div>
+      <div class="box-click"><span><i class="fa fa-comments-o"></i> View 140 more comments</span></div>
+      <div class="box-comments">
+        <!--<div class="comment"><img src="https://goo.gl/oM0Y8G" alt="">
+          <div class="content">
+            <h3><a href="">Emily Rudd</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The nature is wonderfull, :D loll </p>
+          </div>
+        </div>
+        <div class="comment"><img src="https://goo.gl/vswgSn" alt="">
+          <div class="content">
+            <h3><a href="">barbara Palvin</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The Image is awesome, &lt;3 Nice Photo</p>
+          </div>
+        </div>-->
+      </div>
+        <div class="box-new-comment">
+          <img src="https://goo.gl/oOD0V2" alt="">
+          <div class="content">
+            <div class="row">
+              <textarea placeholder="write a comment..."></textarea>
+            </div>
+            <div class="row">
+              <span class="ion-android-attach"></span>
+              <span class="fa fa-smile-o"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+														</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <div class="form-check">
+                                                                <div class="custom-control custom-checkbox custom-checkbox-primary">
+                                                                    <input type="checkbox" class="custom-control-input checkitem" id="tableCheckbox5555">
+                                                                    <label class="custom-control-label" for="tableCheckbox5555"></label>
+                                                                </div>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+															<div class="box update">
+      <div class="box-header">
+        <h3><a href=""><img src="https://goo.gl/oOD0V2" alt="">Roswell Parian</a>
+          <span>March 21,18:45pm <i class="fa fa-globe"></i></span>
+        </h3>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <div class="window"><span></span></div>
+      </div>
+      <div class="box-content">
+        <div class="content">
+          <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur,</p>
+          <div class="img"><img style="width:100%!important; height:100% !important;" src="https://goo.gl/g0Xdh3" alt=""></div>
+        </div>
+      </div>
+      <div class="box-likes">
+        <div class="row">
+          <span><a href="#"><img src="https://goo.gl/oM0Y8G" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/vswgSn" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/4W27eB" alt=""></a></span>
+          <span><a href="#">+99</a></span>
+          <span>Like this</span>
+        </div>
+        <div class="row">
+          <span>145 comments</span>
+        </div>
+      </div>
+      <div class="box-buttons">
+        <div class="row">
+          <button><span class="fa fa-thumbs-up"></span></button>
+          <button><span class="fa fa-comments-o"></span></button>
+          <button><span class="fa fa-share-alt"></span></button>
+        </div>
+      </div>
+      <div class="box-click"><span><i class="fa fa-comments-o"></i> View 140 more comments</span></div>
+      <div class="box-comments">
+        <!--<div class="comment"><img src="https://goo.gl/oM0Y8G" alt="">
+          <div class="content">
+            <h3><a href="">Emily Rudd</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The nature is wonderfull, :D loll </p>
+          </div>
+        </div>
+        <div class="comment"><img src="https://goo.gl/vswgSn" alt="">
+          <div class="content">
+            <h3><a href="">barbara Palvin</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The Image is awesome, &lt;3 Nice Photo</p>
+          </div>
+        </div>-->
+      </div>
+        <div class="box-new-comment">
+          <img src="https://goo.gl/oOD0V2" alt="">
+          <div class="content">
+            <div class="row">
+              <textarea placeholder="write a comment..."></textarea>
+            </div>
+            <div class="row">
+              <span class="ion-android-attach"></span>
+              <span class="fa fa-smile-o"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+														</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <div class="form-check">
+                                                                <div class="custom-control custom-checkbox custom-checkbox-primary">
+                                                                    <input type="checkbox" class="custom-control-input checkitem" id="tableCheckbox666">
+                                                                    <label class="custom-control-label" for="tableCheckbox666"></label>
+                                                                </div>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+															<div class="box update">
+      <div class="box-header">
+        <h3><a href=""><img src="https://goo.gl/oOD0V2" alt="">Roswell Parian</a>
+          <span>March 21,18:45pm <i class="fa fa-globe"></i></span>
+        </h3>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <div class="window"><span></span></div>
+      </div>
+      <div class="box-content">
+        <div class="content">
+          <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur,</p>
+          <div class="img"><img style="width:100%!important; height:100% !important;" src="https://goo.gl/g0Xdh3" alt=""></div>
+        </div>
+      </div>
+      <div class="box-likes">
+        <div class="row">
+          <span><a href="#"><img src="https://goo.gl/oM0Y8G" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/vswgSn" alt=""></a></span>
+          <span><a href="#"><img src="https://goo.gl/4W27eB" alt=""></a></span>
+          <span><a href="#">+99</a></span>
+          <span>Like this</span>
+        </div>
+        <div class="row">
+          <span>145 comments</span>
+        </div>
+      </div>
+      <div class="box-buttons">
+        <div class="row">
+          <button><span class="fa fa-thumbs-up"></span></button>
+          <button><span class="fa fa-comments-o"></span></button>
+          <button><span class="fa fa-share-alt"></span></button>
+        </div>
+      </div>
+      <div class="box-click"><span><i class="fa fa-comments-o"></i> View 140 more comments</span></div>
+      <div class="box-comments">
+        <!--<div class="comment"><img src="https://goo.gl/oM0Y8G" alt="">
+          <div class="content">
+            <h3><a href="">Emily Rudd</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The nature is wonderfull, :D loll </p>
+          </div>
+        </div>
+        <div class="comment"><img src="https://goo.gl/vswgSn" alt="">
+          <div class="content">
+            <h3><a href="">barbara Palvin</a><span><time> 1 hr - </time><a href="#">Like</a></span></h3>
+            <p>The Image is awesome, &lt;3 Nice Photo</p>
+          </div>
+        </div>-->
+      </div>
+        <div class="box-new-comment">
+          <img src="https://goo.gl/oOD0V2" alt="">
+          <div class="content">
+            <div class="row">
+              <textarea placeholder="write a comment..."></textarea>
+            </div>
+            <div class="row">
+              <span class="ion-android-attach"></span>
+              <span class="fa fa-smile-o"></span>
+            </div>
+          </div>
+        </div>
+    </div>
+														</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+									<div class="row">&nbsp;</div>
+                                </div>
+                            </div>
+                        </div>
+						
+						
+						
+						
+                      
+						
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+			
+            <!-- footer content -->
+            <footer class="footer">
+                <div class="float-right">
+                    Admin Template by<a href="javascript:void(0)" class="company-name text-theme">Digimonk</a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            
+            <!-- color settings  -->
+            <script id="color-settings" type="text/css">
+                .theme-custom .text-theme{
+                    color: CUSTOMCOLORVAL;
+                }
+                .theme-custom.nav-sm .main-container .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .side-menu li.active > a {
+                    color: CUSTOMCOLORVAL;
+                    border-right: 3px solid CUSTOMCOLORVAL;
+                }
+                .theme-custom .progress-bar{
+                    background-color: CUSTOMCOLORVAL;
+                }
+                .theme-custom .sidebar .scroll-wrapper .nav-title, .theme-custom .sidebar .scroll-wrapper .nav-title .site-title span, .theme-custom .sidebar .scroll-wrapper .profile .profile-info span,
+                .theme-custom .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .nav.side-menu > li:hover > a, .theme-custom .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .nav.side-menu > li:focus > a, .theme-custom .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .nav.side-menu > li.active > a,
+                .theme-custom .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .nav.side-menu > li.opened > a,
+                .theme-custom .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .nav.side-menu > li.opened .child-menu .active-child a,
+                .theme-custom .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .nav.side-menu > li.opened > a .child-menu .opened > a, .theme-custom .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .nav.side-menu > li.opened > a .child-menu .active-child > a,
+                .theme-custom .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .nav.side-menu > li.active-child > a, .theme-custom .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .nav.child-menu > li:hover > a, .theme-custom .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .nav.child-menu > li:focus > a,
+                .theme-custom .sidebar .scroll-wrapper .main-menu-wrapper .menu-section .nav.child-menu > li.active > a, .theme-custom .header .header-menu .navbar-right > li.dropdown .dropdown-menu li .nav-title, .theme-custom .header .header-menu .navbar-right > li.dropdown .dropdown-menu li .nav-title .site-title span,
+                .theme-custom .header .header-menu .navbar-right > li.dropdown .dropdown-menu li .profile .profile-info span,
+                .theme-custom .header .header-menu .navbar-right > li.dropdown.profile-dropdown .dropdown-menu li a i, .theme-custom .header .header-menu .navbar-right > li.search-wrap button[type="submit"] i,
+                .theme-custom .main-container .content-wrapper .main-content .bg-title .breadcrumb > li.active, .theme-custom .main-container .content-wrapper .main-content .bg-title .breadcrumb > li:hover, .theme-custom .main-container .content-wrapper .main-content .bg-title .breadcrumb > li:focus,
+                .theme-custom .main-container .content-wrapper .main-content .bg-title .breadcrumb > li.active a, .theme-custom .main-container .content-wrapper .main-content .bg-title .breadcrumb > li:hover a, .theme-custom .main-container .content-wrapper .main-content .bg-title .breadcrumb > li:focus a {
+                    color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .header .header-menu .navbar-right > li.dropdown .dropdown-toggle.info-number .badge {
+                    background-color: CUSTOMCOLORVAL;
+                    border-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .card.card-material .card-body .card-link, .theme-custom .card.card-material .nav-tabs > li > a.active, .theme-custom .card.card-image-material .card-body .card-link {
+                    color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .btn-theme, .theme-custom .btn-theme .badge {
+                    background-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .btn-theme.btn-outline {
+                    color: WARNINGCOLORVAL;
+                    border: 1px solid CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .btn-theme:focus, .theme-custom .btn-theme:active, .theme-custom .btn-theme:active:focus, .theme-custom .btn-theme:active:hover, .theme-custom .btn-theme.active, .theme-custom .btn-theme.active:focus, .theme-custom .btn-theme.active:hover {
+                    background-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .btn-theme:hover, .theme-custom .btn-theme.hover {
+                    background-color: CUSTOMDARK;
+                }
+            
+                .theme-custom .btn-theme.disabled, .theme-custom .btn-theme[disabled], .theme-custom .btn-theme.disabled:hover, .theme-custom .btn-theme[disabled]:hover, .theme-custom .btn-theme.disabled:focus, .theme-custom .btn-theme[disabled]:focus, .theme-custom .btn-theme.disabled:active, .theme-custom .btn-theme[disabled]:active, .theme-custom .btn-theme.disabled.active, .theme-custom .btn-theme[disabled].active {
+                    background-color: CUSTOMLIGHT;
+                }
+            
+                .theme-custom .wizard .progress .progress-bar {
+                    background-color: CUSTOMCOLORVAL;
+                    opacity: .4;
+                }
+            
+                .theme-custom .wizard .wizard-navigation.nav .nav-item.active .wizard-navigation-name, .theme-custom .wizard .wizard-navigation.nav .nav-item.done .wizard-navigation-name {
+                    color: CUSTOMCOLORVAL;
+                }
+                .theme-custom .wizard .wizard-navigation.nav .nav-item.active a, .theme-custom .wizard .wizard-navigation.nav .nav-item.done a {
+                    border: 2px solid CUSTOMCOLORVAL;
+                    background-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .nav-tabs > li > a:hover, .theme-custom .nav-tabs > li > a:focus, .theme-custom .nav-tabs > li > a.active,
+                .theme-custom .nav-tabs-simple > li > a.active, .theme-custom .nav-tabs-simple > li > a:hover,
+                .theme-custom .nav-tabs-linetriangle > li > a.active, .theme-custom .collapse-group a[aria-expanded=true], .theme-custom .collapse-group a:not(.disabled):hover,
+                .theme-custom .material-form .form-group .form-control:focus ~ label {
+                    color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .collapse-group [data-toggle="collapse"][aria-expanded=true] {
+                    color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .collapse-group [data-toggle="collapse"]:not(.disabled):hover {
+                    color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .nav-tabs-simple > li > a.active:after, .theme-custom .nav-tabs-simple > li > a:hover:after {
+                    background-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .nav-tabs-linetriangle:after {
+                    border-bottom: 1px solid CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .nav-tabs-linetriangle > li > a.active:before {
+                    border-top-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .card .card-header .card-header-pills > li > a:not(.disabled).active,
+                .theme-custom .card .card-header .card-header-pills > li > a:not(.disabled):hover,
+                .theme-custom .card .card-header .card-header-pills > li > a:not(.disabled):focus {
+                    border-bottom: 2px solid CUSTOMCOLORVAL;
+                    color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .custom-checkbox .custom-control-input:checked ~ .custom-control-label:before,
+                .theme-custom .custom-radio .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: CUSTOMCOLORVAL;
+                    border-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .material-radio .custom-control-label:after {
+                    background: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .material-radio .custom-control-input:checked ~ .custom-control-label:after {
+                    background: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .material-checkbox .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .toggle-button .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: CUSTOMCOLORVAL;
+                    border-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .toggle-button .custom-control-input:checked ~ .custom-control-label:after {
+                    border-color: WARNINGDARK;
+                }
+            
+                .theme-custom .material-form .form-group .form-control:focus ~ label:after {
+                    background-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .settings-wrapper.builder .card .card-body .layout-view.active .btn-activate,
+                .theme-custom .settings-wrapper.builder .card .card-body .layout-view .btn-activate:hover {
+                    background-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .settings-wrapper.builder .card .card-body .layout-view.active {
+                    border: 2px solid CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .settings-wrapper.builder:before {
+                    background-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom  .chat-wrapper .badge {
+                    background-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .chat-box-wrapper .chat-box .chat-header {
+                    background-color: CUSTOMCOLORVAL;
+                }
+            
+                .theme-custom .coming-soon .count-down-box > div span:not(.count-number) {
+                    color: CUSTOMCOLORVAL;
+                }
+                .coming-soonV2 > .container h1 {
+                    color: CUSTOMCOLORVAL;
+                }
+                .btn-primary {
+                    background-color: PRIMARYCOLORVAL;
+                    border-color: PRIMARYCOLORVAL;
+                    color: PRIMARYTEXTCOLORVAL;
+                }
+            
+                .btn-outline-primary {
+                    color: PRIMARYCOLORVAL;
+                    border: 1px solid PRIMARYCOLORVAL;
+                }
+            
+                .btn-outline-primary:hover, .btn-outline-primary.active, .btn-outline-primary:focus, .btn-outline-primary:not([disabled]):not(.disabled).active, .btn-outline-primary:not([disabled]):not(.disabled):active {
+                    background-color: PRIMARYCOLORVAL;
+                    border-color: PRIMARYCOLORVAL;
+                    color: PRIMARYTEXTCOLORVAL !important;
+                }
+            
+                .btn-primary:focus,
+                .btn-primary.active,
+                .btn-primary:active,
+                .btn-primary.active:focus,
+                .btn-primary:active:focus,
+                .btn-primary:active:hover,
+                .btn-primary.active:hover,
+                .btn-primary:not([disabled]):not(.disabled).active,
+                .btn-primary:not([disabled]):not(.disabled):active,
+                .btn-primary:not(:disabled):not(.disabled):active,
+                .btn-primary:not(:disabled):not(.disabled):active:focus {
+                    background-color: PRIMARYDARKER;
+                    border-color: PRIMARYDARKER;
+                    color: PRIMARYTEXTCOLORVAL;
+                }
+            
+                .btn-primary.hover, .btn-primary:hover {
+                    background-color: PRIMARYDARK;
+                    border-color: PRIMARYDARK;
+                    color: PRIMARYTEXTCOLORVAL;
+                }
+            
+                .btn-primary.disabled, .btn-primary[disabled] {
+                    background-color: PRIMARYLIGHT;
+                    border-color: PRIMARYLIGHT;
+                }
+            
+                .btn-primary.disabled:hover, .btn-primary[disabled]:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, .btn-primary.disabled.active, .btn-primary[disabled].active {
+                    background-color: PRIMARYLIGHT;
+                    border-color: PRIMARYLIGHT
+                }
+            
+                .show > .dropdown-toggle.btn-primary, .show > .btn-outline-primary.dropdown-toggle {
+                    background-color: PRIMARYDARK;
+                    border-color: PRIMARYDARK;
+                }
+            
+                fieldset[disabled] .btn-primary {
+                    background-color: PRIMARYLIGHT;
+                }
+            
+                fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
+                    background-color: PRIMARYLIGHT;
+                }
+            
+                .btn-secondary {
+                    background-color: SECONDARYCOLORVAL;
+                    border-color: SECONDARYCOLORVAL;
+                    color: SECONDARYTEXTCOLORVAL;
+                }
+            
+                .btn-outline-secondary {
+                    color: SECONDARYCOLORVAL;
+                    border: 1px solid SECONDARYCOLORVAL;
+                }
+            
+                .btn-outline-secondary:hover, .btn-outline-secondary.active, .btn-outline-secondary:focus, .btn-outline-secondary:not([disabled]):not(.disabled).active, .btn-outline-secondary:not([disabled]):not(.disabled):active {
+                    background-color: SECONDARYCOLORVAL;
+                    border-color: SECONDARYCOLORVAL;
+                    color: SECONDARYTEXTCOLORVAL !important;
+                }
+            
+                .btn-secondary:focus,
+                .btn-secondary.active,
+                .btn-secondary:active,
+                .btn-secondary.active:focus,
+                .btn-secondary.active:hover,
+                .btn-secondary:active:focus,
+                .btn-secondary:active:hover,
+                .btn-secondary:not([disabled]):not(.disabled).active,
+                .btn-secondary:not([disabled]):not(.disabled):active,
+                .btn-secondary:not(:disabled):not(.disabled):active,
+                .btn-secondary:not(:disabled):not(.disabled):active:focus {
+                    background-color: SECONDARYDARKER;
+                    border-color: SECONDARYDARKER;
+                    color: SECONDARYTEXTCOLORVAL;
+                }
+            
+                .btn-secondary.hover, .btn-secondary:hover {
+                    background-color: SECONDARYDARK;
+                    border-color: SECONDARYDARK;
+                    color: SECONDARYTEXTCOLORVAL;
+                }
+            
+                .btn-secondary.disabled, .btn-secondary[disabled] {
+                    background-color: SECONDARYLIGHT;
+                    border-color: SECONDARYLIGHT;
+                }
+            
+                .btn-secondary.disabled:hover, .btn-secondary[disabled]:hover, .btn-secondary.disabled:focus, .btn-secondary[disabled]:focus, .btn-secondary.disabled:active, .btn-secondary[disabled]:active, .btn-secondary.disabled.active, .btn-secondary[disabled].active {
+                    background-color: SECONDARYLIGHT;
+                    border-color: SECONDARYLIGHT
+                }
+            
+                .show .dropdown-toggle.btn-secondary, .show > .btn-outline-secondary.dropdown-toggle {
+                    background-color: SECONDARYDARK;
+                    border-color: SECONDARYDARK;
+                }
+            
+                fieldset[disabled] .btn-secondary {
+                    background-color: SECONDARYLIGHT;
+                }
+            
+                fieldset[disabled] .btn-secondary:hover, fieldset[disabled] .btn-secondary:focus, fieldset[disabled] .btn-secondary:active, fieldset[disabled] .btn-secondary.active {
+                    background-color: SECONDARYLIGHT;
+                }
+            
+                .btn-success {
+                    background-color: SUCCESSCOLORVAL;
+                    border-color: SUCCESSCOLORVAL;
+                    color: SUCCESSTEXTCOLORVAL;
+                }
+            
+                .btn-outline-success {
+                    color: SUCCESSCOLORVAL;
+                    border: 1px solid SUCCESSCOLORVAL;
+                }
+            
+                .btn-outline-success:hover, .btn-outline-success.active, .btn-outline-success:focus, .btn-outline-success:not([disabled]):not(.disabled).active, .btn-outline-success:not([disabled]):not(.disabled):active {
+                    background-color: SUCCESSCOLORVAL;
+                    border-color: SUCCESSCOLORVAL;
+                    color: SUCCESSTEXTCOLORVAL !important;
+                }
+            
+                .btn-success:focus,
+                .btn-success.active,
+                .btn-success:active,
+                .btn-success.active:focus,
+                .btn-success:active:focus,
+                .btn-success:active:hover,
+                .btn-success.active:hover,
+                .btn-success:not([disabled]):not(.disabled).active,
+                .btn-success:not([disabled]):not(.disabled):active,
+                .btn-success:not(:disabled):not(.disabled):active,
+                .btn-success:not(:disabled):not(.disabled):active:focus {
+                    background-color: SUCCESSDARKER;
+                    border-color: SUCCESSDARKER;
+                    color: SUCCESSTEXTCOLORVAL;
+                }
+            
+                .btn-success.hover, .btn-success:hover {
+                    background-color: SUCCESSDARK;
+                    border-color: SUCCESSDARK;
+                    color: SUCCESSTEXTCOLORVAL;
+                }
+            
+                .btn-success.disabled, .btn-success[disabled] {
+                    background-color: SUCCESSLIGHT;
+                    border-color: SUCCESSLIGHT;
+                }
+            
+                .btn-success.disabled:hover, .btn-success[disabled]:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, .btn-success.disabled:active, .btn-success[disabled]:active, .btn-success.disabled.active, .btn-success[disabled].active {
+                    background-color: SUCCESSLIGHT;
+                    border-color: SUCCESSLIGHT;
+                }
+            
+                .show .dropdown-toggle.btn-success, .show > .btn-outline-success.dropdown-toggle {
+                    background-color: SUCCESSDARK;
+                    border-color: SUCCESSDARK;
+                }
+            
+                fieldset[disabled] .btn-success {
+                    background-color: SUCCESSLIGHT;
+                }
+            
+                fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
+                    background-color: SUCCESSLIGHT;
+                }
+            
+                .btn-danger {
+                    background-color: DANGERCOLORVAL;
+                    border-color: DANGERCOLORVAL;
+                    color: DANGERTEXTCOLORVAL;
+                }
+            
+                .btn-outline-danger {
+                    color: DANGERCOLORVAL;
+                    border: 1px solid DANGERCOLORVAL;
+                }
+            
+                .btn-outline-danger:hover, .btn-outline-danger.active, .btn-outline-danger:focus, .btn-outline-danger:not([disabled]):not(.disabled).active, .btn-outline-danger:not([disabled]):not(.disabled):active {
+                    background-color: DANGERCOLORVAL;
+                    border-color: DANGERCOLORVAL;
+                    color: DANGERTEXTCOLORVAL !important;
+                }
+            
+                .btn-danger:focus,
+                .btn-danger.active,
+                .btn-danger:active,
+                .btn-danger.active:hover,
+                .btn-danger.active:focus,
+                .btn-danger:active:focus, .btn-danger:active:hover,
+                .btn-danger:not([disabled]):not(.disabled).active,
+                .btn-danger:not([disabled]):not(.disabled):active,
+                .btn-danger:not(:disabled):not(.disabled):active,
+                .btn-danger:not(:disabled):not(.disabled):active:focus {
+                    background-color: DANGERDARKER;
+                    border-color: DANGERDARKER;
+                    color: DANGERTEXTCOLORVAL;
+                }
+            
+                .btn-danger.hover, .btn-danger:hover {
+                    background-color: DANGERDARK;
+                    border-color: DANGERDARK;
+                }
+            
+                .btn-danger.disabled, .btn-danger[disabled] {
+                    background-color: DANGERLIGHT;
+                    border-color: DANGERLIGHT;
+                }
+            
+                .btn-danger.disabled:hover, .btn-danger[disabled]:hover, .btn-danger.disabled:focus, .btn-danger[disabled]:focus, .btn-danger.disabled:active, .btn-danger[disabled]:active, .btn-danger.disabled.active, .btn-danger[disabled].active {
+                    background-color: DANGERLIGHT;
+                    border-color: DANGERLIGHT;
+                }
+            
+                .show .dropdown-toggle.btn-danger, .show > .btn-outline-danger.dropdown-toggle {
+                    background-color: DANGERDARK;
+                    border-color: DANGERDARK;
+                }
+            
+                fieldset[disabled] .btn-danger {
+                    background-color: DANGERLIGHT;
+                }
+            
+                fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
+                    background-color: DANGERLIGHT;
+                }
+            
+                .btn-warning {
+                    background-color: WARNINGCOLORVAL;
+                    border-color: WARNINGCOLORVAL;
+                    color: WARNINGTEXTCOLORVAL;
+                }
+            
+                .btn-outline-warning {
+                    color: WARNINGCOLORVAL;
+                    border: 1px solid WARNINGCOLORVAL;
+                }
+            
+                .btn-outline-warning:hover, .btn-outline-warning.active, .btn-outline-warning:focus, .btn-outline-warning:not([disabled]):not(.disabled).active, .btn-outline-warning:not([disabled]):not(.disabled):active {
+                    background-color: WARNINGCOLORVAL;
+                    border-color: WARNINGCOLORVAL;
+                    color: WARNINGTEXTCOLORVAL !important;
+                }
+            
+                .btn-warning:focus,
+                .btn-warning.active,
+                .btn-warning:active,
+                .btn-warning.active:focus,
+                .btn-warning.active:hover,
+                .btn-warning:active:focus, .btn-warning:active:hover,
+                .btn-warning:not([disabled]):not(.disabled).active,
+                .btn-warning:not([disabled]):not(.disabled):active,
+                .btn-warning:not(:disabled):not(.disabled):active,
+                .btn-warning:not(:disabled):not(.disabled):active:focus {
+                    background-color: WARNINGDARKER;
+                    border-color: WARNINGDARKER;
+                    color: WARNINGTEXTCOLORVAL;
+                }
+            
+                .btn-warning.hover, .btn-warning:hover {
+                    background-color: WARNINGDARK;
+                    border-color: WARNINGDARK;
+                    color: WARNINGTEXTCOLORVAL;
+                }
+            
+                .btn-warning.disabled, .btn-warning[disabled] {
+                    background-color: WARNINGLIGHT;
+                    border-color: WARNINGLIGHT;
+                }
+            
+                .btn-warning.disabled:hover, .btn-warning[disabled]:hover, .btn-warning.disabled:focus, .btn-warning[disabled]:focus, .btn-warning.disabled:active, .btn-warning[disabled]:active, .btn-warning.disabled.active, .btn-warning[disabled].active {
+                    background-color: WARNINGLIGHT;
+                    border-color: WARNINGLIGHT;
+                }
+            
+                .show .dropdown-toggle.btn-warning, .show > .btn-outline-warning.dropdown-toggle {
+                    background-color: WARNINGDARK;
+                    border-color: WARNINGDARK;
+                }
+            
+                fieldset[disabled] .btn-warning {
+                    background-color: WARNINGLIGHT;
+                }
+            
+                fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active {
+                    background-color: WARNINGLIGHT;
+                }
+            
+                .btn-info {
+                    background-color: INFOCOLORVAL;
+                    border-color: INFOCOLORVAL;
+                    color: INFOTEXTCOLORVAL;
+                }
+            
+                .btn-outline-info {
+                    color: INFOCOLORVAL;
+                    border: 1px solid INFOCOLORVAL;
+                }
+            
+                .btn-outline-info:hover, .btn-outline-info.active, .btn-outline-info:focus, .btn-outline-info:not([disabled]):not(.disabled).active, .btn-outline-info:not([disabled]):not(.disabled):active {
+                    background-color: INFOCOLORVAL;
+                    border-color: INFOCOLORVAL;
+                    color: INFOTEXTCOLORVAL !important;
+                }
+            
+                .btn-info.active, .btn-info.active:focus, .btn-info:active, .btn-info:active:focus, .btn-info:active:hover, .btn-info:focus {
+                    color: INFOTEXTCOLORVAL;
+                }
+            
+                .btn-info:focus,
+                .btn-info.active,
+                .btn-info:active,
+                .btn-info.active:focus,
+                .btn-info.active:hover,
+                .btn-info:active:focus,
+                .btn-info:active:hover,
+                .btn-info:not([disabled]):not(.disabled).active,
+                .btn-info:not([disabled]):not(.disabled):active,
+                .btn-info:not(:disabled):not(.disabled):active,
+                .btn-info:not(:disabled):not(.disabled):active:focus {
+                    background-color: INFODARKER;
+                    border-color: INFODARKER;
+                    color: INFOTEXTCOLORVAL;
+                }
+            
+                .btn-info.hover, .btn-info:hover {
+                    background-color: INFODARK;
+                    border-color: INFODARK;
+                    color: INFOTEXTCOLORVAL;
+                }
+            
+                .btn-info.disabled, .btn-info[disabled] {
+                    background-color: INFOLIGHT;
+                    border-color: INFOLIGHT;
+                }
+            
+                .btn-info.disabled:hover, .btn-info[disabled]:hover, .btn-info.disabled:focus, .btn-info[disabled]:focus, .btn-info.disabled:active, .btn-info[disabled]:active, .btn-info.disabled.active, .btn-info[disabled].active {
+                    background-color: INFOLIGHT;
+                    border-color: INFOLIGHT;
+                }
+            
+                .show .dropdown-toggle.btn-info, .show > .btn-outline-info.dropdown-toggle {
+                    background-color: INFODARK;
+                    border-color: INFODARK;
+                }
+            
+                fieldset[disabled] .btn-info {
+                    background-color: INFOLIGHT;
+                }
+            
+                fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
+                    background-color: INFOLIGHT;
+                }
+            
+                .btn-light {
+                    background-color: LIGHTCOLORVAL;
+                    border-color: LIGHTCOLORVAL;
+                    color: LIGHTTEXTCOLORVAL;
+                }
+            
+                .btn-outline-light {
+                    color: LIGHTCOLORVAL;
+                    border: 1px solid LIGHTCOLORVAL;
+                }
+            
+                .btn-outline-light:hover, .btn-outline-light.active, .btn-outline-light:focus, .btn-outline-light:not([disabled]):not(.disabled).active, .btn-outline-light:not([disabled]):not(.disabled):active {
+                    background-color: LIGHTCOLORVAL;
+                    border-color: LIGHTCOLORVAL;
+                    color: LIGHTTEXTCOLORVAL !important;
+                }
+            
+                .btn-light:focus,
+                .btn-light.active,
+                .btn-light:active,
+                .btn-light.active:focus,
+                .btn-light:active:focus,
+                .btn-light:active:hover,
+                .btn-light.active:hover,
+                .btn-light:not([disabled]):not(.disabled).active,
+                .btn-light:not([disabled]):not(.disabled):active,
+                .btn-light:not(:disabled):not(.disabled):active,
+                .btn-light:not(:disabled):not(.disabled):active:focus {
+                    background-color: LIGHTDARKER;
+                    border-color: LIGHTDARKER;
+                    color: LIGHTTEXTCOLORVAL;
+                }
+            
+                .btn-light.hover, .btn-light:hover {
+                    background-color: LIGHTDARK;
+                    border-color: LIGHTDARK;
+                    color: LIGHTTEXTCOLORVAL;
+                }
+            
+                .btn-light.disabled, .btn-light[disabled] {
+                    background-color: LIGHTLIGHT;
+                    border-color: LIGHTLIGHT;
+                }
+            
+                .btn-light.disabled:hover, .btn-light[disabled]:hover, .btn-light.disabled:focus, .btn-light[disabled]:focus, .btn-light.disabled:active, .btn-light[disabled]:active, .btn-light.disabled.active, .btn-light[disabled].active {
+                    background-color: LIGHTLIGHT;
+                    border-color: LIGHTLIGHT
+                }
+            
+                .show .dropdown-toggle.btn-light, .show > .btn-outline-light.dropdown-toggle {
+                    background-color: LIGHTDARK;
+                    border-color: LIGHTDARK;
+                }
+            
+                fieldset[disabled] .btn-light {
+                    background-color: LIGHTLIGHT;
+                }
+            
+                fieldset[disabled] .btn-light:hover, fieldset[disabled] .btn-light:focus, fieldset[disabled] .btn-light:active, fieldset[disabled] .btn-light.active {
+                    background-color: LIGHTLIGHT;
+                }
+            
+                .btn-dark {
+                    background-color: DARKCOLORVAL;
+                    border-color: DARKCOLORVAL;
+                    color: DARKTEXTCOLORVAL;
+                }
+            
+                .btn-outline-dark {
+                    color: DARKCOLORVAL;
+                    border: 1px solid DARKCOLORVAL;
+                }
+            
+                .btn-outline-dark:hover, .btn-outline-dark.active, .btn-outline-dark:focus, .btn-outline-dark:not([disabled]):not(.disabled).active, .btn-outline-dark:not([disabled]):not(.disabled):active {
+                    background-color: DARKCOLORVAL;
+                    border-color: DARKCOLORVAL;
+                    color: DARKTEXTCOLORVAL !important;
+                }
+            
+                .btn-dark:focus,
+                .btn-dark.active,
+                .btn-dark:active,
+                .btn-dark.active:focus,
+                .btn-dark:active:focus,
+                .btn-dark:active:hover,
+                .btn-dark.active:hover,
+                .btn-dark:not([disabled]):not(.disabled).active,
+                .btn-dark:not([disabled]):not(.disabled):active,
+                .btn-dark:not(:disabled):not(.disabled):active,
+                .btn-dark:not(:disabled):not(.disabled):active:focus {
+                    background-color: DARKDARKER;
+                    border-color: DARKDARKER;
+                    color: DARKTEXTCOLORVAL;
+                }
+            
+                .btn-dark.hover, .btn-dark:hover {
+                    background-color: DARKDARK;
+                    border-color: DARKDARK;
+                    color: DARKTEXTCOLORVAL;
+                }
+            
+                .btn-dark.disabled, .btn-dark[disabled] {
+                    background-color: DARKLIGHT;
+                    border-color: DARKLIGHT;
+                }
+            
+                .btn-dark.disabled:hover, .btn-dark[disabled]:hover, .btn-dark.disabled:focus, .btn-dark[disabled]:focus, .btn-dark.disabled:active, .btn-dark[disabled]:active, .btn-dark.disabled.active, .btn-dark[disabled].active {
+                    background-color: DARKLIGHT;
+                    border-color: DARKLIGHT;
+                }
+            
+                .show .dropdown-toggle.btn-dark, .show > .btn-outline-dark.dropdown-toggle {
+                    background-color: DARKDARK;
+                    border-color: DARKDARK;
+                }
+            
+                fieldset[disabled] .btn-dark {
+                    background-color: DARKLIGHT;
+                }
+            
+                fieldset[disabled] .btn-dark:hover, fieldset[disabled] .btn-dark:focus, fieldset[disabled] .btn-dark:active, fieldset[disabled] .btn-dark.active {
+                    background-color: DARKLIGHT;
+                }
+            
+                .nav-tabs-simple.nav-tabs-primary > li > a.active, .nav-tabs-simple.nav-tabs-primary > li > a:hover, .nav-tabs-simple.nav-tabs-primary > li > a:focus {
+                    color: PRIMARYCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-primary > li > a.active:after, .nav-tabs-simple.nav-tabs-primary > li > a:hover:after, .nav-tabs-simple.nav-tabs-primary > li > a:focus:after {
+                    background-color: PRIMARYCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-secondary > li > a.active, .nav-tabs-simple.nav-tabs-secondary > li > a:hover, .nav-tabs-simple.nav-tabs-secondary > li > a:focus {
+                    color: SECONDARYCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-secondary > li > a.active:after, .nav-tabs-simple.nav-tabs-secondary > li > a:hover:after, .nav-tabs-simple.nav-tabs-secondary > li > a:focus:after {
+                    background-color: SECONDARYCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-success > li > a.active, .nav-tabs-simple.nav-tabs-success > li > a:hover, .nav-tabs-simple.nav-tabs-success > li > a:focus {
+                    color: SUCCESSCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-success > li > a.active:after, .nav-tabs-simple.nav-tabs-success > li > a:hover:after, .nav-tabs-simple.nav-tabs-success > li > a:focus:after {
+                    background-color: SUCCESSCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-danger > li > a.active, .nav-tabs-simple.nav-tabs-danger > li > a:hover, .nav-tabs-simple.nav-tabs-danger > li > a:focus {
+                    color: DANGERCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-danger > li > a.active:after, .nav-tabs-simple.nav-tabs-danger > li > a:hover:after, .nav-tabs-simple.nav-tabs-danger > li > a:focus:after {
+                    background-color: DANGERCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-warning > li > a.active, .nav-tabs-simple.nav-tabs-warning > li > a:hover, .nav-tabs-simple.nav-tabs-warning > li > a:focus {
+                    color: WARNINGCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-warning > li > a.active:after, .nav-tabs-simple.nav-tabs-warning > li > a:hover:after, .nav-tabs-simple.nav-tabs-warning > li > a:focus:after {
+                    background-color: WARNINGCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-info > li > a.active, .nav-tabs-simple.nav-tabs-info > li > a:hover, .nav-tabs-simple.nav-tabs-info > li > a:focus {
+                    color: INFOCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-info > li > a.active:after, .nav-tabs-simple.nav-tabs-info > li > a:hover:after, .nav-tabs-simple.nav-tabs-info > li > a:focus:after {
+                    background-color: INFOCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-light > li > a.active, .nav-tabs-simple.nav-tabs-light > li > a:hover, .nav-tabs-simple.nav-tabs-light > li > a:focus {
+                    color: LIGHTCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-light > li > a.active:after, .nav-tabs-simple.nav-tabs-light > li > a:hover:after, .nav-tabs-simple.nav-tabs-light > li > a:focus:after {
+                    background-color: LIGHTCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-dark > li > a.active, .nav-tabs-simple.nav-tabs-dark > li > a:hover, .nav-tabs-simple.nav-tabs-dark > li > a:focus {
+                    color: DARKCOLORVAL;
+                }
+            
+                .nav-tabs-simple.nav-tabs-dark > li > a.active:after, .nav-tabs-simple.nav-tabs-dark > li > a:hover:after, .nav-tabs-simple.nav-tabs-dark > li > a:focus:after {
+                    background-color: DARKCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-primary:after {
+                    border-bottom: 1px solid PRIMARYCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-primary > li > a.active {
+                    color: PRIMARYCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-primary > li > a.active:before {
+                    border-top-color: PRIMARYCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-secondary:after {
+                    border-bottom: 1px solid SECONDARYCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-secondary > li > a.active {
+                    color: SECONDARYCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-secondary > li > a.active:before {
+                    border-top-color: SECONDARYCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-success:after {
+                    border-bottom: 1px solid SUCCESSCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-success > li > a.active {
+                    color: SUCCESSCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-success > li > a.active:before {
+                    border-top-color: SUCCESSCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-danger:after {
+                    border-bottom: 1px solid DANGERCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-danger > li > a.active {
+                    color: DANGERCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-danger > li > a.active:before {
+                    border-top-color: DANGERCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-info:after {
+                    border-bottom: 1px solid INFOCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-info > li > a.active {
+                    color: INFOCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-info > li > a.active:before {
+                    border-top-color: INFOCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-warning:after {
+                    border-bottom: 1px solid WARNINGCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-warning > li > a.active {
+                    color: WARNINGCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-warning > li > a.active:before {
+                    border-top-color: WARNINGCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-light:after {
+                    border-bottom: 1px solid LIGHTCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-light > li > a.active {
+                    color: LIGHTCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-light > li > a.active:before {
+                    border-top-color: LIGHTCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-dark:after {
+                    border-bottom: 1px solid DARKCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-dark > li > a.active {
+                    color: DARKCOLORVAL;
+                }
+            
+                .nav-tabs-linetriangle.nav-tabs-dark > li > a.active:before {
+                    border-top-color: DARKCOLORVAL;
+                }
+            
+                .bg-primary {
+                    background-color: PRIMARYCOLORVAL !important;
+                    color: PRIMARYTEXTCOLORVAL;
+                }
+            
+                .bg-primary-dark {
+                    background-color: PRIMARYDARK !important;
+                    color: PRIMARYTEXTCOLORVAL;
+                }
+            
+                .bg-primary-darker {
+                    background-color: PRIMARYDARKER !important;
+                    color: PRIMARYTEXTCOLORVAL;
+                }
+            
+                .bg-primary-light {
+                    background-color: PRIMARYLIGHT !important;
+                    color: PRIMARYTEXTCOLORVAL;
+                }
+            
+                .bg-primary-lighter {
+                    background-color: PRIMARYLIGHTER !important;
+                    color: PRIMARYTEXTCOLORVAL;
+                }
+            
+                .bg-secondary {
+                    background-color: SECONDARYCOLORVAL !important;
+                    color: SECONDARYTEXTCOLORVAL;
+                }
+            
+                .bg-secondary-dark {
+                    background-color: SECONDARYDARK !important;
+                    color: SECONDARYTEXTCOLORVAL;
+                }
+            
+                .bg-secondary-darker {
+                    background-color: SECONDARYDARKER !important;
+                    color: SECONDARYTEXTCOLORVAL;
+                }
+            
+                .bg-secondary-light {
+                    background-color: SECONDARYLIGHT !important;
+                    color: SECONDARYTEXTCOLORVAL;
+                }
+            
+                .bg-secondary-lighter {
+                    background-color: SECONDARYLIGHTER !important;
+                    color: SECONDARYTEXTCOLORVAL;
+                }
+            
+                .bg-success {
+                    background-color: SUCCESSCOLORVAL !important;
+                    color: SUCCESSTEXTCOLORVAL;
+                }
+            
+                .bg-success-dark {
+                    background-color: SUCCESSDARK !important;
+                    color: SUCCESSTEXTCOLORVAL;
+                }
+            
+                .bg-success-darker {
+                    background-color: SUCCESSDARKER !important;
+                    color: SUCCESSTEXTCOLORVAL;
+                }
+            
+                .bg-success-light {
+                    background-color: SUCCESSLIGHT !important;
+                    color: SUCCESSTEXTCOLORVAL;
+                }
+            
+                .bg-success-lighter {
+                    background-color: SUCCESSLIGHTER !important;
+                    color: SUCCESSTEXTCOLORVAL;
+                }
+            
+                .bg-warning {
+                    background-color: WARNINGCOLORVAL !important;
+                    color: WARNINGTEXTCOLORVAL;
+                }
+            
+                .bg-warning-dark {
+                    background-color: WARNINGDARK !important;
+                    color: WARNINGTEXTCOLORVAL;
+                }
+            
+                .bg-warning-darker {
+                    background-color: WARNINGDARKER !important;
+                    color: WARNINGTEXTCOLORVAL;
+                }
+            
+                .bg-warning-light {
+                    background-color: WARNINGLIGHT !important;
+                    color: WARNINGTEXTCOLORVAL;
+                }
+            
+                .bg-warning-lighter {
+                    background-color: WARNINGLIGHTER !important;
+                    color: WARNINGTEXTCOLORVAL;
+                }
+            
+                .bg-danger {
+                    background-color: DANGERCOLORVAL !important;
+                    color: DANGERTEXTCOLORVAL;
+                }
+            
+                .bg-danger-dark {
+                    background-color: DANGERDARK !important;
+                    color: DANGERTEXTCOLORVAL;
+                }
+            
+                .bg-danger-darker {
+                    background-color: DANGERDARKER !important;
+                    color: DANGERTEXTCOLORVAL;
+                }
+            
+                .bg-danger-light {
+                    background-color: DANGERLIGHT !important;
+                    color: DANGERTEXTCOLORVAL;
+                }
+            
+                .bg-danger-lighter {
+                    background-color: DANGERLIGHTER !important;
+                    color: DANGERTEXTCOLORVAL;
+                }
+            
+                .bg-info {
+                    background-color: INFOCOLORVAL !important;
+                    color: INFOTEXTCOLORVAL;
+                }
+            
+                .bg-info-dark {
+                    background-color: INFODARK !important;
+                    color: INFOTEXTCOLORVAL;
+                }
+            
+                .bg-info-darker {
+                    background-color: INFODARKER !important;
+                    color: INFOTEXTCOLORVAL;
+                }
+            
+                .bg-info-light {
+                    background-color: INFOLIGHT !important;
+                    color: INFOTEXTCOLORVAL;
+                }
+            
+                .bg-info-lighter {
+                    background-color: INFOLIGHTER !important;
+                    color: INFOTEXTCOLORVAL;
+                }
+            
+                .bg-light {
+                    background-color: LIGHTCOLORVAL !important;
+                    color: LIGHTTEXTCOLORVAL;
+                }
+            
+                .bg-light-dark {
+                    background-color: LIGHTDARK !important;
+                    color: LIGHTTEXTCOLORVAL;
+                }
+            
+                .bg-light-darker {
+                    background-color: LIGHTDARKER !important;
+                    color: LIGHTTEXTCOLORVAL;
+                }
+            
+                .bg-light-light {
+                    background-color: LIGHTLIGHT !important;
+                    color: LIGHTTEXTCOLORVAL;
+                }
+            
+                .bg-light-lighter {
+                    background-color: LIGHTLIGHTER !important;
+                    color: LIGHTTEXTCOLORVAL;
+                }
+            
+                .bg-dark {
+                    background-color: DARKCOLORVAL !important;
+                    color: DARKTEXTCOLORVAL;
+                }
+            
+                .bg-dark-dark {
+                    background-color: DARKDARK !important;
+                    color: DARKTEXTCOLORVAL;
+                }
+            
+                .bg-dark-darker {
+                    background-color: DARKDARKER !important;
+                    color: DARKTEXTCOLORVAL;
+                }
+            
+                .bg-dark-light {
+                    background-color: DARKLIGHT !important;
+                    color: DARKTEXTCOLORVAL;
+                }
+            
+                .bg-dark-lighter {
+                    background-color: DARKLIGHTER !important;
+                    color: DARKTEXTCOLORVAL;
+                }
+            
+                .text-primary {
+                    color: PRIMARYCOLORVAL !important;
+                }
+            
+                .text-secondary {
+                    color: COLORVAL !important;
+                }
+            
+                .text-success {
+                    color: SUCCESSCOLORVAL !important;
+                }
+            
+                .text-info {
+                    color: INFOCOLORVAL !important;
+                }
+            
+                .text-warning {
+                    color: WARNINGCOLORVAL !important;
+                }
+            
+                .text-danger {
+                    color: DANGERCOLORVAL !important;
+                }
+            
+                .text-light {
+                    color: LIGHTCOLORVAL !important;
+                }
+            
+                .text-dark {
+                    color: DARKCOLORVAL !important;
+                }
+            
+                a.text-primary:focus, a.text-primary:hover {
+                    color: PRIMARYDARK !important;
+                }
+            
+                a.text-secondary:focus, a.text-secondary:hover {
+                    color: SECONDARYDARK !important;
+                }
+            
+                a.text-success:focus, a.text-success:hover {
+                    color: SUCCESSDARK !important;
+                }
+            
+                a.text-info:focus, a.text-info:hover {
+                    color: INFODARK !important;
+                }
+            
+                a.text-warning:focus, a.text-warning:hover {
+                    color: WARNINGDARK !important;
+                }
+            
+                a.text-danger:focus, a.text-danger:hover {
+                    color: DANGERDARK !important;
+                }
+            
+                a.text-light:focus, a.text-light:hover {
+                    color: LIGHTDARK !important;
+                }
+            
+                a.text-dark:focus, a.text-dark:hover {
+                    color: DARKDARK !important;
+                }
+            
+                .border-primary {
+                    border-color: PRIMARYCOLORVAL !important;
+                }
+            
+                .border-secondary {
+                    border-color: SECONDARYCOLORVAL !important;
+                }
+            
+                .border-success {
+                    border-color: SUCCESSCOLORVAL !important;
+                }
+            
+                .border-info {
+                    border-color: INFOCOLORVAL !important;
+                }
+            
+                .border-warning {
+                    border-color: WARNINGCOLORVAL !important;
+                }
+            
+                .border-danger {
+                    border-color: DANGERCOLORVAL !important;
+                }
+            
+                .border-light {
+                    border-color: LIGHTCOLORVAL !important;
+                }
+            
+                .border-dark {
+                    border-color: DARKCOLORVAL !important;
+                }
+            
+                .badge-primary {
+                    background-color: PRIMARYCOLORVAL;
+                    color: PRIMARYTEXTCOLORVAL;
+                }
+            
+                .badge-secondary {
+                    background-color: SECONDARYCOLORVAL;
+                    color: SECONDARYTEXTCOLORVAL;
+                }
+            
+                .badge-success {
+                    background-color: SUCCESSCOLORVAL;
+                    color: SUCCESSTEXTCOLORVAL;
+                }
+            
+                .badge-warning {
+                    background-color: WARNINGCOLORVAL;
+                    color: WARNINGTEXTCOLORVAL;
+                }
+            
+                .badge-danger {
+                    background-color: DANGERCOLORVAL;
+                    color: DANGERTEXTCOLORVAL;
+                }
+            
+                .badge-info {
+                    background-color: INFOCOLORVAL;
+                    color: INFOTEXTCOLORVAL;
+                }
+            
+                .badge-light {
+                    background-color: LIGHTCOLORVAL;
+                    color: LIGHTTEXTCOLORVAL;
+                }
+            
+                .badge-dark {
+                    background-color: DARKCOLORVAL;
+                    color: DARKTEXTCOLORVAL;
+                }
+            
+                .btn-primary .badge {
+                    background-color: PRIMARYDARK;
+                }
+            
+                .btn-secondary .badge {
+                    background-color: SECONDARYDARK;
+                }
+            
+                .btn-success .badge {
+                    background-color: SUCCESSDARK;
+                }
+            
+                .btn-warning .badge {
+                    background-color: WARNINGDARK;
+                }
+            
+                .btn-danger .badge {
+                    background-color: DANGERDARK;
+                }
+            
+                .btn-info .badge {
+                    background-color: INFODARK;
+                }
+            
+                .btn-light .badge {
+                    background-color: LIGHTDARK;
+                }
+            
+                .btn-dark .badge {
+                    background-color: DARKDARK;
+                }
+            
+                .custom-checkbox.custom-checkbox-primary .custom-control-input:checked ~ .custom-control-label:before,
+                .custom-radio.custom-radio-primary .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: PRIMARYCOLORVAL;
+                    border-color: PRIMARYCOLORVAL;
+                }
+            
+                .custom-checkbox.custom-checkbox-secondary .custom-control-input:checked ~ .custom-control-label:before,
+                .custom-radio.custom-radio-secondary .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: SECONDARYCOLORVAL;
+                    border-color: SECONDARYCOLORVAL;
+                }
+            
+                .custom-checkbox.custom-checkbox-success .custom-control-input:checked ~ .custom-control-label:before,
+                .custom-radio.custom-radio-success .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: SUCCESSCOLORVAL;
+                    border-color: SUCCESSCOLORVAL;
+                }
+            
+                .custom-checkbox.custom-checkbox-warning .custom-control-input:checked ~ .custom-control-label:before,
+                .custom-radio.custom-radio-warning .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: WARNINGCOLORVAL;
+                    border-color: WARNINGCOLORVAL;
+                }
+            
+                .custom-checkbox.custom-checkbox-danger .custom-control-input:checked ~ .custom-control-label:before,
+                .custom-radio.custom-radio-danger .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: DANGERCOLORVAL;
+                    border-color: DANGERCOLORVAL;
+                }
+            
+                .custom-checkbox.custom-checkbox-info .custom-control-input:checked ~ .custom-control-label:before,
+                .custom-radio.custom-radio-info .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: INFOCOLORVAL;
+                    border-color: INFOCOLORVAL;
+                }
+            
+                .custom-checkbox.custom-checkbox-light .custom-control-input:checked ~ .custom-control-label:before,
+                .custom-radio.custom-radio-light .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: LIGHTCOLORVAL;
+                    border-color: LIGHTCOLORVAL;
+                }
+            
+                .custom-checkbox.custom-checkbox-dark .custom-control-input:checked ~ .custom-control-label:before,
+                .custom-radio.custom-radio-dark .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: DARKCOLORVAL;
+                    border-color: DARKCOLORVAL;
+                }
+            
+                .material-checkbox.material-checkbox-primary .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: PRIMARYCOLORVAL;
+                }
+            
+                .material-checkbox.material-checkbox-success .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: SUCCESSCOLORVAL;
+                }
+            
+                .material-checkbox.material-checkbox-secondary .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: SECONDARYCOLORVAL;
+                }
+            
+                .material-checkbox.material-checkbox-warning .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: WARNINGCOLORVAL;
+                }
+            
+                .material-checkbox.material-checkbox-danger .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: DANGERCOLORVAL;
+                }
+            
+                .material-checkbox.material-checkbox-info .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: INFOCOLORVAL;
+                }
+            
+                .material-checkbox.material-checkbox-light .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: LIGHTCOLORVAL;
+                }
+            
+                .material-checkbox.material-checkbox-dark .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: DARKCOLORVAL;
+                }
+            
+                .material-radio.material-radio-primary .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: PRIMARYCOLORVAL;
+                }
+            
+                .material-radio.material-radio-primary .custom-control-input:checked ~ .custom-control-label:after {
+                    background-color: PRIMARYCOLORVAL;
+                }
+            
+                .material-radio.material-radio-success .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: SUCCESSCOLORVAL;
+                }
+            
+                .material-radio.material-radio-success .custom-control-input:checked ~ .custom-control-label:after {
+                    background-color: SUCCESSCOLORVAL;
+                }
+            
+                .material-radio.material-radio-secondary .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: SECONDARYCOLORVAL;
+                }
+            
+                .material-radio.material-radio-secondary .custom-control-input:checked ~ .custom-control-label:after {
+                    background-color: SECONDARYCOLORVAL;
+                }
+            
+                .material-radio.material-radio-warning .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: WARNINGCOLORVAL;
+                }
+            
+                .material-radio.material-radio-warning .custom-control-input:checked ~ .custom-control-label:after {
+                    background-color: WARNINGCOLORVAL;
+                }
+            
+                .material-radio.material-radio-danger .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: DANGERCOLORVAL;
+                }
+            
+                .material-radio.material-radio-danger .custom-control-input:checked ~ .custom-control-label:after {
+                    background-color: DANGERCOLORVAL;
+                }
+            
+                .material-radio.material-radio-info .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: INFOCOLORVAL;
+                }
+            
+                .material-radio.material-radio-info .custom-control-input:checked ~ .custom-control-label:after {
+                    background-color: INFOCOLORVAL;
+                }
+            
+                .material-radio.material-radio-light .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: LIGHTCOLORVAL;
+                }
+            
+                .material-radio.material-radio-light .custom-control-input:checked ~ .custom-control-label:after {
+                    background-color: LIGHTCOLORVAL;
+                }
+            
+                .material-radio.material-radio-dark .custom-control-input:checked ~ .custom-control-label:before {
+                    border-color: DARKCOLORVAL;
+                }
+            
+                .material-radio.material-radio-dark .custom-control-input:checked ~ .custom-control-label:after {
+                    background-color: DARKCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-primary:focus ~ label:after {
+                    background-color: PRIMARYCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-primary:focus ~ label {
+                    color: PRIMARYCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-success:focus ~ label:after {
+                    background-color: SUCCESSCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-success:focus ~ label {
+                    color: SUCCESSCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-info:focus ~ label:after {
+                    background-color: INFOCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-info:focus ~ label {
+                    color: INFOCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-warning:focus ~ label:after {
+                    background-color: WARNINGCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-warning:focus ~ label {
+                    color: WARNINGCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-danger:focus ~ label:after {
+                    background-color: DANGERCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-danger:focus ~ label {
+                    color: DANGERCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-secondary:focus ~ label:after {
+                    background-color: SECONDARYCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-secondary:focus ~ label {
+                    color: SECONDARYCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-light:focus ~ label:after {
+                    background-color: LIGHTCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-light:focus ~ label {
+                    color: LIGHTCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-dark:focus ~ label:after {
+                    background-color: DARKCOLORVAL;
+                }
+            
+                .material-form .form-group .form-control.form-control-dark:focus ~ label {
+                    color: DARKCOLORVAL;
+                }
+            
+                .input-group .input-group-prepend.primary .input-group-text, .input-group .input-group-append.primary .input-group-text {
+                    background-color: PRIMARYCOLORVAL;
+                    border: 1px solid PRIMARYCOLORVAL;
+                    color: PRIMARYTEXTCOLORVAL;
+                }
+            
+                .input-group .input-group-prepend.success .input-group-text, .input-group .input-group-append.success .input-group-text {
+                    background-color: SUCCESSCOLORVAL;
+                    border: 1px solid SUCCESSCOLORVAL;
+                    color: SUCCESSTEXTCOLORVAL;
+                }
+            
+                .input-group .input-group-prepend.info .input-group-text, .input-group .input-group-append.info .input-group-text {
+                    background-color: INFOCOLORVAL;
+                    border: 1px solid INFOCOLORVAL;
+                    color: INFOTEXTCOLORVAL;
+                }
+            
+                .input-group .input-group-prepend.warning .input-group-text, .input-group .input-group-append.warning .input-group-text {
+                    background-color: WARNINGCOLORVAL;
+                    border: 1px solid WARNINGCOLORVAL;
+                    color: WARNINGTEXTCOLORVAL;
+                }
+            
+                .input-group .input-group-prepend.danger .input-group-text, .input-group .input-group-append.danger .input-group-text {
+                    background-color: DANGERCOLORVAL;
+                    border: 1px solid DANGERCOLORVAL;
+                    color: DANGERTEXTCOLORVAL;
+                }
+            
+                .input-group .input-group-prepend.secondary .input-group-text, .input-group .input-group-append.secondary .input-group-text {
+                    background-color: SECONDARYCOLORVAL;
+                    border: 1px solid SECONDARYCOLORVAL;
+                    color: SECONDARYTEXTCOLORVAL;
+                }
+            
+                .input-group .input-group-prepend.light .input-group-text, .input-group .input-group-append.light .input-group-text {
+                    background-color: LIGHTCOLORVAL;
+                    border: 1px solid LIGHTCOLORVAL;
+                    color: LIGHTTEXTCOLORVAL;
+                }
+            
+                .input-group .input-group-prepend.dark .input-group-text, .input-group .input-group-append.dark .input-group-text {
+                    background-color: DARKCOLORVAL;
+                    border: 1px solid DARKCOLORVAL;
+                    color: DARKTEXTCOLORVAL;
+                }
+            
+                .toggle-button.toggle-button-primary .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: PRIMARYCOLORVAL;
+                    border-color: PRIMARYCOLORVAL;
+                }
+            
+                .toggle-button.toggle-button-primary .custom-control-input:checked ~ .custom-control-label:after {
+                    border-color: PRIMARYDARKER;
+                }
+            
+                .toggle-button.toggle-button-success .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: SUCCESSCOLORVAL;
+                    border-color: SUCCESSCOLORVAL;
+                }
+            
+                .toggle-button.toggle-button-success .custom-control-input:checked ~ .custom-control-label:after {
+                    border-color: SUCCESSDARKER;
+                }
+            
+                .toggle-button.toggle-button-info .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: INFOCOLORVAL;
+                    border-color: INFOCOLORVAL;
+                }
+            
+                .toggle-button.toggle-button-info .custom-control-input:checked ~ .custom-control-label:after {
+                    border-color: INFODARKER;
+                }
+            
+                .toggle-button.toggle-button-warning .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: WARNINGCOLORVAL;
+                    border-color: WARNINGCOLORVAL;
+                }
+            
+                .toggle-button.toggle-button-warning .custom-control-input:checked ~ .custom-control-label:after {
+                    border-color: WARNINGDARKER;
+                }
+            
+                .toggle-button.toggle-button-danger .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: DANGERCOLORVAL;
+                    border-color: DANGERCOLORVAL;
+                }
+            
+                .toggle-button.toggle-button-danger .custom-control-input:checked ~ .custom-control-label:after {
+                    border-color: DANGERDARKER;
+                }
+            
+                .toggle-button.toggle-button-secondary .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: SECONDARYCOLORVAL;
+                    border-color: SECONDARYCOLORVAL;
+                }
+            
+                .toggle-button.toggle-button-secondary .custom-control-input:checked ~ .custom-control-label:after {
+                    border-color: SECONDARYDARKER;
+                }
+            
+                .toggle-button.toggle-button-light .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: LIGHTCOLORVAL;
+                    border-color: LIGHTCOLORVAL;
+                }
+            
+                .toggle-button.toggle-button-light .custom-control-input:checked ~ .custom-control-label:after {
+                    border-color: LIGHTDARKER;
+                }
+            
+                .toggle-button.toggle-button-dark .custom-control-input:checked ~ .custom-control-label:before {
+                    background-color: DARKCOLORVAL;
+                    border-color: DARKCOLORVAL;
+                }
+            
+                .toggle-button.toggle-button-dark .custom-control-input:checked ~ .custom-control-label:after {
+                    border-color: DARKDARKER;
+                }
+            
+                .primary-range-input::-webkit-slider-thumb {
+                    border: 1px solid PRIMARYCOLORVAL;
+                }
+            
+                .primary-range-input::-moz-range-thumb {
+                    border: 1px solid PRIMARYCOLORVAL;
+                }
+            
+                .primary-range-input {
+                    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, PRIMARYCOLORVAL), color-stop(0.15, #ddd));
+                }
+            
+                .primary-range-input::-ms-fill-lower {
+                    background: PRIMARYCOLORVAL;
+                }
+            
+                .primary-range-input::-ms-thumb {
+                    border: 1px solid PRIMARYCOLORVAL;
+                }
+            
+                .success-range-input::-webkit-slider-thumb {
+                    border: 1px solid SUCCESSCOLORVAL;
+                }
+            
+                .success-range-input::-moz-range-thumb {
+                    border: 1px solid SUCCESSCOLORVAL;
+                }
+            
+                .success-range-input {
+                    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, SUCCESSCOLORVAL), color-stop(0.15, #ddd));
+                }
+            
+                .success-range-input::-ms-fill-lower {
+                    background: SUCCESSCOLORVAL;
+                }
+            
+                .success-range-input::-ms-thumb {
+                    border: 1px solid SUCCESSCOLORVAL;
+                }
+            
+                .info-range-input::-webkit-slider-thumb {
+                    border: 1px solid INFOCOLORVAL;
+                }
+            
+                .info-range-input::-moz-range-thumb {
+                    border: 1px solid INFOCOLORVAL;
+                }
+            
+                .info-range-input {
+                    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, INFOCOLORVAL), color-stop(0.15, #ddd));
+                }
+            
+                .info-range-input::-ms-fill-lower {
+                    background: INFOCOLORVAL;
+                }
+            
+                .info-range-input::-ms-thumb {
+                    border: 1px solid INFOCOLORVAL;
+                }
+            
+                .warning-range-input::-webkit-slider-thumb {
+                    border: 1px solid WARNINGCOLORVAL;
+                }
+            
+                .warning-range-input::-moz-range-thumb {
+                    border: 1px solid WARNINGCOLORVAL;
+                }
+            
+                .warning-range-input {
+                    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, WARNINGCOLORVAL), color-stop(0.15, #ddd));
+                }
+            
+                .warning-range-input::-ms-fill-lower {
+                    background: WARNINGCOLORVAL;
+                }
+            
+                .warning-range-input::-ms-thumb {
+                    border: 1px solid WARNINGCOLORVAL;
+                }
+            
+                .danger-range-input::-webkit-slider-thumb {
+                    border: 1px solid DANGERCOLORVAL;
+                }
+            
+                .danger-range-input::-moz-range-thumb {
+                    border: 1px solid DANGERCOLORVAL;
+                }
+            
+                .danger-range-input {
+                    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, DANGERCOLORVAL), color-stop(0.15, #ddd));
+                }
+            
+                .danger-range-input::-ms-fill-lower {
+                    background: DANGERCOLORVAL;
+                }
+            
+                .danger-range-input::-ms-thumb {
+                    border: 1px solid DANGERCOLORVAL;
+                }
+            
+                .secondary-range-input::-webkit-slider-thumb {
+                    border: 1px solid SECONDARYCOLORVAL;
+                }
+            
+                .secondary-range-input::-moz-range-thumb {
+                    border: 1px solid SECONDARYCOLORVAL;
+                }
+            
+                .secondary-range-input {
+                    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, SECONDARYCOLORVAL), color-stop(0.15, #ddd));
+                }
+            
+                .secondary-range-input::-ms-fill-lower {
+                    background: SECONDARYCOLORVAL;
+                }
+            
+                .secondary-range-input::-ms-thumb {
+                    border: 1px solid SECONDARYCOLORVAL;
+                }
+            
+                .light-range-input::-webkit-slider-thumb {
+                    border: 1px solid LIGHTCOLORVAL;
+                }
+            
+                .light-range-input::-moz-range-thumb {
+                    border: 1px solid LIGHTCOLORVAL;
+                }
+            
+                .light-range-input {
+                    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, LIGHTCOLORVAL), color-stop(0.15, #ddd));
+                }
+            
+                .light-range-input::-ms-fill-lower {
+                    background: LIGHTCOLORVAL;
+                }
+            
+                .light-range-input::-ms-thumb {
+                    border: 1px solid LIGHTCOLORVAL;
+                }
+            
+                .dark-range-input::-webkit-slider-thumb {
+                    border: 1px solid DARKCOLORVAL;
+                }
+            
+                .dark-range-input::-moz-range-thumb {
+                    border: 1px solid DARKCOLORVAL;
+                }
+            
+                .dark-range-input {
+                    background-image: -webkit-gradient(linear, left top, right top, color-stop(0.15, DARKCOLORVAL), color-stop(0.15, #ddd));
+                }
+            
+                .dark-range-input::-ms-fill-lower {
+                    background: DARKCOLORVAL;
+                }
+            
+                .dark-range-input::-ms-thumb {
+                    border: 1px solid DARKCOLORVAL;
+                }
+            
+                .rectangular-slider .primary-range-input::-webkit-slider-thumb {
+                    background-color: PRIMARYCOLORVAL;
+                }
+            
+                .rectangular-slider .primary-range-input::-moz-range-thumb {
+                    background-color: PRIMARYCOLORVAL;
+                }
+            
+                .rectangular-slider .primary-range-input::-ms-thumb {
+                    background-color: PRIMARYCOLORVAL;
+                }
+            
+                .rectangular-slider .success-range-input::-webkit-slider-thumb {
+                    background-color: SUCCESSCOLORVAL;
+                }
+            
+                .rectangular-slider .success-range-input::-moz-range-thumb {
+                    background-color: SUCCESSCOLORVAL;
+                }
+            
+                .rectangular-slider .success-range-input::-ms-thumb {
+                    background-color: SUCCESSCOLORVAL;
+                }
+            
+                .rectangular-slider .info-range-input::-webkit-slider-thumb {
+                    background-color: INFOCOLORVAL;
+                }
+            
+                .rectangular-slider .info-range-input::-moz-range-thumb {
+                    background-color: INFOCOLORVAL;
+                }
+            
+                .rectangular-slider .info-range-input::-ms-thumb {
+                    background-color: INFOCOLORVAL;
+                }
+            
+                .rectangular-slider .warning-range-input::-webkit-slider-thumb {
+                    background-color: WARNINGCOLORVAL;
+                }
+            
+                .rectangular-slider .warning-range-input::-moz-range-thumb {
+                    background-color: WARNINGCOLORVAL;
+                }
+            
+                .rectangular-slider .warning-range-input::-ms-thumb {
+                    background-color: WARNINGCOLORVAL;
+                }
+            
+                .rectangular-slider .danger-range-input::-webkit-slider-thumb {
+                    background-color: DANGERCOLORVAL;
+                }
+            
+                .rectangular-slider .danger-range-input::-moz-range-thumb {
+                    background-color: DANGERCOLORVAL;
+                }
+            
+                .rectangular-slider .danger-range-input::-ms-thumb {
+                    background-color: DANGERCOLORVAL;
+                }
+            
+                .rectangular-slider .secondary-range-input::-webkit-slider-thumb {
+                    background-color: SECONDARYCOLORVAL;
+                }
+            
+                .rectangular-slider .secondary-range-input::-moz-range-thumb {
+                    background-color: SECONDARYCOLORVAL;
+                }
+            
+                .rectangular-slider .secondary-range-input::-ms-thumb {
+                    background-color: SECONDARYCOLORVAL;
+                }
+            
+                .rectangular-slider .light-range-input::-webkit-slider-thumb {
+                    background-color: LIGHTCOLORVAL;
+                }
+            
+                .rectangular-slider .light-range-input::-moz-range-thumb {
+                    background-color: LIGHTCOLORVAL;
+                }
+            
+                .rectangular-slider .light-range-input::-ms-thumb {
+                    background-color: LIGHTCOLORVAL;
+                }
+            
+                .rectangular-slider .dark-range-input::-webkit-slider-thumb {
+                    background-color: DARKCOLORVAL;
+                }
+            
+                .rectangular-slider .dark-range-input::-moz-range-thumb {
+                    background-color: DARKCOLORVAL;
+                }
+            
+                .rectangular-slider .dark-range-input::-ms-thumb {
+                    background-color: DARKCOLORVAL;
+                }
+            
+                .collapse-group.collapse-group-success .card .card-header a[aria-expanded=true] {
+                    color: SUCCESSCOLORVAL;
+                }
+            
+                .collapse-group.collapse-group-primary .card .card-header a[aria-expanded=true] {
+                    color: PRIMARYCOLORVAL;
+                }
+            
+                .collapse-group.collapse-group-danger .card .card-header a[aria-expanded=true] {
+                    color: DANGERCOLORVAL;
+                }
+            
+                .collapse-group.collapse-group-info .card .card-header a[aria-expanded=true] {
+                    color: INFOCOLORVAL;
+                }
+            
+                .collapse-group.collapse-group-warning .card .card-header a[aria-expanded=true] {
+                    color: WARNINGCOLORVAL;
+                }
+            
+                .collapse-group.collapse-group-light .card .card-header a[aria-expanded=true] {
+                    color: LIGHTCOLORVAL;
+                }
+            
+                .collapse-group.collapse-group-dark .card .card-header a[aria-expanded=true] {
+                    color: DARKCOLORVAL;
+                }
+            
+                .collapse-group.collapse-group-secondary .card .card-header a[aria-expanded=true] {
+                    color: SECONDARYCOLORVAL;
+                }
+            </script>
+            <!-- /color settings -->
+            
+            <!-- color settings  -->
+            <script id="defaultColorSettings" type="text/css">
+                $primary: PRIMARYCOLORVAL;<br>
+                $primary-dark: PRIMARYDARK;<br>
+                $primary-darker: PRIMARYDARKER;<br>
+                $primary-light: PRIMARYLIGHT;<br>
+                $primary-lighter: PRIMARYLIGHTER;<br>
+            
+                $secondary: SECONDARYCOLORVAL;<br>
+                $secondary-dark: SECONDARYDARK;<br>
+                $secondary-darker: SECONDARYDARKER;<br>
+                $secondary-light: SECONDARYLIGHT;<br>
+                $secondary-lighter: SECONDARYLIGHTER;<br>
+            
+                $success: SUCCESSCOLORVAL;<br>
+                $success-dark: SUCCESSDARK;<br>
+                $success-darker: SUCCESSDARKER;<br>
+                $success-light: SUCCESSLIGHT;<br>
+                $success-lighter: SUCCESSLIGHTER;<br>
+            
+                $info: INFOCOLORVAL;<br>
+                $info-dark: INFODARK;<br>
+                $info-darker: INFODARKER;<br>
+                $info-light: INFOLIGHT;<br>
+                $info-lighter: INFOLIGHTER;<br>
+            
+                $warning: WARNINGCOLORVAL;<br>
+                $warning-dark: WARNINGDARK;<br>
+                $warning-darker: WARNINGDARKER;<br>
+                $warning-light: WARNINGLIGHT;<br>
+                $warning-lighter: WARNINGLIGHTER;<br>
+            
+                $danger: DANGERCOLORVAL;<br>
+                $danger-dark: DANGERDARK;<br>
+                $danger-darker: DANGERDARKER;<br>
+                $danger-light: DANGERLIGHT;<br>
+                $danger-lighter: DANGERLIGHTER;<br>
+            
+                $light: LIGHTCOLORVAL;<br>
+                $light-dark: LIGHTDARK;<br>
+                $light-darker: LIGHTDARKER;<br>
+                $light-light: LIGHTLIGHT;<br>
+                $light-lighter: LIGHTLIGHTER;<br>
+            
+                $dark: DARKCOLORVAL;<br>
+                $dark-dark: DARKDARK;<br>
+                $dark-darker: DARKDARKER;<br>
+                $dark-light: DARKLIGHT;<br>
+                $dark-lighter: DARKLIGHTER;<br>
+            
+                $custom: CUSTOMCOLORVAL;<br>
+                $custom-dark: CUSTOMDARK;<br>
+                $custom-darker: CUSTOMDARKER;<br>
+                $custom-light: CUSTOMLIGHT;<br>
+                $custom-lighter: CUSTOMLIGHTER;<br>
+            
+            </script>
+            <!-- /color settings -->
+            <!-- /footer content -->
+
+        </div>
+    </div>
+
+<!-- site foot -->
+<script src="js/vendor.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/settings.min.js"></script>
+<script src="js/charts.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#example2').DataTable();
+} );
+</script>
+
+<script type="text/javascript">
+     $(document).ready(function(){
+       $("#get_ids_for_delete").click(function() {
+          var select_id=$(".checkitem:checked").length;
+          if(select_id==0)
+          {
+            alert("Please Select The CheckBox");
+          }
+          else
+          {
+            if(confirm("Are you sure you want to delete the selected  "+select_id+" Images"))
+            {
+              var yourArray=[];
+             $(".checkitem:checked").each(function(){
+                yourArray.push($(this).val());
+              });
+               //window.location="delete.php?id="+yourArray;  
+            }
+            else
+            {
+              window.location="manage-content-images.html"; 
+            }
+          }
+          });
+       
+     
+     });
+
+     $("#tableCheckbox1").change(function(){
+    $(".checkitem").prop("checked",$(this).prop("checked"))
+  });
+  
+  $(".checkitem").change(function(){
+    if($(this).prop("checked")==false)
+    {
+      $("#tableCheckbox1").prop("checked",false);
+    }
+    if($(".checkitem:checked").length==$(".checkitem").length)
+    {
+      $("#tableCheckbox1").prop("checked",true);
+    }
+  })
+   </script>
+</body>
+</html>
+<!-- /site foot -->

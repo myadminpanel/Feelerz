@@ -1,0 +1,24 @@
+[25-Apr-2019 06:47:55 Etc/GMT] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php on line 6
+[25-Apr-2019 06:48:01 Etc/GMT] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php on line 6
+[25-Apr-2019 06:48:02 Etc/GMT] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php on line 6
+[25-Apr-2019 06:48:03 Etc/GMT] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php on line 6
+[25-Apr-2019 06:48:03 Etc/GMT] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php on line 6
+[25-Apr-2019 06:48:03 Etc/GMT] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/digimonk/public_html/ios-admin/application/views/admin/modules/user/index.php on line 6

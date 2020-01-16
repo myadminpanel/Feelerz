@@ -1,0 +1,79 @@
+/*------------------------------------------------------------------
+[Table of contents]
+This file include css code conrespond for table and mobile device
+
+- #Large Screen: 						>= 1367px
+- #Only Desktop: 						1366px >= screen >= 1025
+- #Desktop, Tablet Landscape: 			1024px >= screen
+- #Only Laptop, Tablet Landscape:		1024px >= screen >= 991px
+- #Tablet:								991px >= screen
+- #Tablet Portrait						768px >= screen
+- #Only Tablet							768px >= screen >= 700px
+- #Mobile Lanscape						700px >= screen
+- #Mobile Portrait						480px >= screen
+- #Small Moblie							320px >= screen
+-------------------------------------------------------------------*/
+@media screen and (min-width: 1024px) {}
+
+/* #Large Screen */
+@media screen and (min-width: 1367px) {}
+
+/* #Desktop, Tablet Landscape */
+@media screen and (max-width: 1024px) {}
+
+/* #Laptop, Tablet Portrait */
+@media screen and (max-width: 1024px) and (min-width: 991px) {}
+
+/* #Only Tablet */
+/* #Mobile Lanscape */
+@media screen and (max-width: 700px) {}
+
+/* #Mobile */
+@media screen and (max-width: 480px) {
+.hjui{font-size: 15px !important;}
+.card .change-img-text-new{
+	width: 90% !important;
+	height: 57% !important;
+}
+.etm-text{font-size: 15px !important;}
+.hyu{margin:40px 0px;}
+.igh{margin:40px 0px;}
+.explore{padding:70px 30px;}
+.off-btn{width:100% !important; margin-left:0px !important;}
+.btn-off{width:100% !important; margin-left:0px !important;}
+.btn-block.ohi{margin-left:0px !important;}
+.feld_one{margin:0 0 20px 0;}
+.company-addresses .address, .company-addresses .map{display: block;width:100%;}
+.company-addresses .address {padding: 45px 20px 20px;}
+.help_center_wrapper .help_center_inner{width: 100%;}
+.help_center_wrapper {margin-top: 10px !important;}
+.PageDashboard-card{margin-top:10px;}
+text {
+    font-size: 12px !important;
+}
+}
+
+/* #Small Mobile */
+@media screen and (max-width: 320px) {
+.hjui{font-size: 15px !important;}
+.card .change-img-text-new{
+	width: 90% !important;
+	height: 57% !important;
+}
+.etm-text{font-size: 15px !important;}
+.hyu{margin:40px 0px;}
+.igh{margin:40px 0px;}
+.explore{padding:70px 30px;}
+.off-btn{width:100% !important; margin-left:0px !important;}
+.btn-off{width:100% !important; margin-left:0px !important;}
+.btn-block.ohi{margin-left:0px !important;}
+.feld_one{margin:0 0 20px 0;}
+.company-addresses .address, .company-addresses .map{display: block;width:100%;}
+.company-addresses .address {padding: 45px 20px 20px;}
+.help_center_wrapper .help_center_inner{width: 100%;}
+.help_center_wrapper {margin-top: 10px !important;}
+.PageDashboard-card{margin-top:10px;}
+text {
+    font-size: 12px !important;
+}
+}
